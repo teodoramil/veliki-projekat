@@ -1,0 +1,574 @@
+<!doctype html>
+<html amp lang="en">
+
+<!-- Mirrored from rsacryptosystem.wordpress.com/2020/04/29/example-post/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2020 09:20:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Koliko je, u stvari, RSA kriptosistem siguran?" />
+<meta property="og:url" content="../index.html" />
+<meta property="og:description" content="RSA se može smatrati sigurnim kriptosistemom, pod uslovom da se ispravno koristi. Svi dosadašnji napadi nam daju mogućnost da uočimo greške pri implementaciji RSA i izboru parametara, te da ih u sk…" />
+<meta property="article:published_time" content="2020-04-29T11:13:32+00:00" />
+<meta property="article:modified_time" content="2020-05-19T00:37:17+00:00" />
+<meta property="og:site_name" content="RSA kriptosistem" />
+<meta property="og:image" content="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1800" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Koliko je, u stvari, RSA kriptosistem siguran?" />
+<meta name="twitter:image" content="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-173d9.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+	<title>Koliko je, u stvari, RSA kriptosistem siguran? &#8211; RSA kriptosistem</title>
+		<link rel="canonical" href="../index.html" />
+	<script type='text/javascript' src='../../../../../../cdn.ampproject.org/v0.js' async></script>
+<script type='text/javascript' src='../../../../../../cdn.ampproject.org/v0/amp-youtube-0.1.js' async custom-element="amp-youtube"></script>
+<script type='text/javascript' src='../../../../../../cdn.ampproject.org/v0/amp-carousel-0.1.js' async custom-element="amp-carousel"></script>
+<script type='text/javascript' src='../../../../../../cdn.ampproject.org/v0/amp-selector-0.1.js' async custom-element="amp-selector"></script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>	<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"RSA kriptosistem","logo":"https:\/\/rsacryptosystem.files.wordpress.com\/2020\/05\/cropped-encrypt-3-599204-4.png?w=60"},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/rsacryptosystem.wordpress.com\/2020\/04\/29\/example-post\/","headline":"Koliko je, u stvari, RSA kriptosistem siguran?","datePublished":"2020-04-29T11:13:32+02:00","dateModified":"2020-05-19T00:37:17+02:00","author":{"@type":"Person","name":"Teodora Milanović"},"image":{"@type":"ImageObject","url":"https:\/\/rsacryptosystem.files.wordpress.com\/2020\/05\/ibm6-1-1.jpg","width":1800,"height":1200}}</script>
+	<meta name="generator" content="AMP Plugin v1.4.2; mode=reader; experiences=website"><meta name="generator" content="WordPress.com" />
+	<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ * Additionally, in side of \AMP_Img_Sanitizer::determine_dimensions() it could $amp_img->setAttribute( 'object-fit', 'contain' )
+ * so that the following rules wouldn't be needed.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+amp-anim.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+amp-carousel .amp-wp-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1rem;
+}
+
+.wp-block-gallery[data-amp-carousel="true"] {
+	display: block;
+	flex-wrap: unset;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 750px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( ../../../../../../s2.wp.com/wp-content/plugins/amp-1.4/assets/images/placeholder-icon.png) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		.wp-block-jetpack-rating-star span.screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; word-wrap: normal; }.wp-block-jetpack-rating-spiciness span, .wp-block-jetpack-rating-priciness span { display: none; }/* Inline stylesheets */
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-8a45f7c{background-image:url("../../../../../../rsacryptosystem.files.wordpress.com/2020/05/cryptography.jpg");background-position:82% 96%;min-height:618px}:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-69ded7c{text-decoration:underline}	</style>
+</head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../../../../index.html">
+										<amp-img src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-476ca.png?w=32" width="32" height="32" class="amp-wp-site-icon"></amp-img>
+						<span class="amp-site-title">
+				RSA kriptosistem			</span>
+		</a>
+
+					</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">Koliko je, u stvari, RSA kriptosistem siguran?</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=24&amp;d=identicon&amp;r=g" alt="Teodora Milanović" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">Teodora Milanović</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-04-29T11:13:32+00:00">
+		3 weeks ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		
+<div class="wp-block-cover alignfull has-background-dim-10 has-background-dim is-style-bottom-wave amp-wp-8a45f7c"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center has-large-font-size"></p>
+</div></div>
+
+
+
+<p class="has-text-align-justify">RSA se može smatrati sigurnim kriptosistemom, pod uslovom da se ispravno koristi. Svi dosadašnji napadi nam daju mogućnost da uočimo greške pri implementaciji RSA i izboru parametara, te da ih u skladu sa tim izbjegavamo. Više o tome na stranici <span class="amp-wp-69ded7c"><span class="has-inline-color has-secondary-color"><a href="../../../../../category/kriptoanaliza/index.html" target="_blank" rel="noreferrer noopener">NAPADI NA RSA</a>.</span></span></p>
+
+
+
+<p class="has-text-align-justify">Naglim napretkom današnjih računara javila se potreba za povećanjem sigurnosti, odnosno zaštite podataka. Sigurnost RSA kriptosistema bazira se na teškoći faktorizacije velikih brojeva i na današnjim računarima takav problem nije lako rješiv pa su ti sistemi još uvijek sigurni. Takođe, činjenica da algoritmi za faktorizaciju brojeva postaju svakim danom sve bolji, ali i neumoljiv razvoj kompjutera učinili su da 512 bitni RSA algoritam nije više dovoljan za bezbjedno šifrovanje poruka. Međutim, ključeve dužine 512 bitova (155 cifara) nije moguće probiti na današnjim ličnim računarima. Za to se koriste složeni računarski sistemi, ali su oni skupi i teško dostupni. Dužina ključeva za RSA algoritam je uglavnom 1024 bita. Za njih se pretpostavlja da će biti bezbjedni barem još 15-tak godina. Ali za potpunu sigurnost preporučuje se korištenje ključeva koji su bar 2048 bita dugi. Naravno, sve u zavisnosti od važnosti informacije koju želimo da šifrujemo. </p>
+
+
+
+<p class="has-text-align-justify">Kriptosistemi nikad nisu bili neprobojni. Njihova sigurnost bazira se na činjenici da treba dosta vremena da se probije šifra na klasičnim računarima. Brojni informatičari čak smatraju da je praktično nemoguće faktorizovati brojeve koji su duži od 2048 bita. Ali, sa razvojem tehnologije, pretpostavlja se da će problem faktorizacije biti lako rješiv u budućnosti. Kao primjer se mogu uzeti kvantni računari i Šorov algoritam. RSA je zasnovan na pretpostavci da je računarski neizvodljivo rastaviti veliki broj na proste činioce u razumnom vremenu. Međutim, Šorov algoritam pokazuje da bi to moglo biti efikasno na idealnom kvantnom računaru, te da bi se sa lakoćom mogao faktorizovati broj duži od 2048 bita. Kako je time narušena i sigurnost RSA kriptosistema to je motivisalo naučnike da otpočnu istraživanje novih kriptosistema koji bi bili sigurni od kvantnih računara. Nazvani su post-kvantna kriptografija.</p>
+
+
+
+<p class="has-text-align-justify">Ipak, kvantni računari  još ne postoje u obliku u kom bi bili konkurencija klasičnim računarima. Smatra se da bi kvantni računari sa 20 miliona qubita mogli da probiju 2048-bitnu enkripciju za samo 8 sati! Ali, današnji najbolji kvantni procesor <em>Bristlecone</em> ima tek 72 qubita. Samim tim, zaključujemo da je RSA još uvijek siguran algoritam za šifrovanje podataka.</p>
+
+
+
+<p>U nastavku možete pogledati jedan zanimljiv video na ovu temu:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich  wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<amp-youtube data-videoid="6H_9l9N3IXU" layout="responsive" width="16" height="9"></amp-youtube></div></figure><p>IBM-ov kvantni računar sa 50 qubita:</p>
+
+
+<div class="wp-block-jetpack-slideshow wp-amp-block wp-block-jetpack-slideshow__autoplay wp-block-jetpack-slideshow__autoplay-playing" id="wp-block-jetpack-slideshow__1"><div class="wp-block-jetpack-slideshow_container swiper-container"><amp-carousel width="1800" height="1200" layout="responsive" type="slides" data-next-button-aria-label="Next Slide" data-prev-button-aria-label="Previous Slide" controls loop autoplay delay="3000" id="wp-block-jetpack-slideshow__amp-carousel__1" on="slideChange:wp-block-jetpack-slideshow__amp-pagination__1.toggle(index=event.index, value=true)"><div class="wp-block-jetpack-slideshow_slide"><figure><amp-img width="1800" height="1200" src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1f68f.jpg?w=1800" class="wp-block-jetpack-slideshow_image amp-wp-enforced-sizes" alt="" object-fit="contain" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg 1800w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=1024 1024w" layout="intrinsic"><noscript><img width="1800" height="1200" src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1f68f.jpg?w=1800" class="wp-block-jetpack-slideshow_image" alt="" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg 1800w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=1024 1024w" sizes="(max-width: 1800px) 100vw, 1800px"></noscript></amp-img></figure></div><div class="wp-block-jetpack-slideshow_slide"><figure><amp-img width="1800" height="1200" src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1f68f.jpg?w=1800" class="wp-block-jetpack-slideshow_image amp-wp-enforced-sizes" alt="" object-fit="contain" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg 1800w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=1024 1024w" layout="intrinsic"><noscript><img width="1800" height="1200" src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1f68f.jpg?w=1800" class="wp-block-jetpack-slideshow_image" alt="" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg 1800w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=1024 1024w" sizes="(max-width: 1800px) 100vw, 1800px"></noscript></amp-img></figure></div><div class="wp-block-jetpack-slideshow_slide"><figure><amp-img width="800" height="1200" src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-175cc.jpg?w=800" class="wp-block-jetpack-slideshow_image amp-wp-enforced-sizes" alt="" object-fit="contain" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=800 800w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=100 100w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=200 200w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=683 683w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg 1200w" layout="intrinsic"><noscript><img width="800" height="1200" src="../../../../../../rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-175cc.jpg?w=800" class="wp-block-jetpack-slideshow_image" alt="" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=800 800w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=100 100w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=200 200w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=683 683w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg 1200w" sizes="(max-width: 800px) 100vw, 800px"></noscript></amp-img></figure></div></amp-carousel><a aria-label="Pause Slideshow" class="wp-block-jetpack-slideshow_button-pause" role="button" on="tap:wp-block-jetpack-slideshow__amp-carousel__1.toggleAutoplay(toggleOn=false),wp-block-jetpack-slideshow__1.toggleClass(class=wp-block-jetpack-slideshow__autoplay-playing,force=false)"></a><a aria-label="Play Slideshow" class="wp-block-jetpack-slideshow_button-play" role="button" on="tap:wp-block-jetpack-slideshow__amp-carousel__1.toggleAutoplay(toggleOn=true),wp-block-jetpack-slideshow__1.toggleClass(class=wp-block-jetpack-slideshow__autoplay-playing,force=true)"></a><amp-selector id="wp-block-jetpack-slideshow__amp-pagination__1" class="wp-block-jetpack-slideshow_pagination swiper-pagination swiper-pagination-bullets amp-pagination" on="select:wp-block-jetpack-slideshow__amp-carousel__1.goToSlide(index=event.targetOption)" layout="container"><button option="0" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1" selected></button><button option="1" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></button><button option="2" class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></button></amp-selector></div></div>	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../../../../category/osnovne-informacije/index.html" rel="category tag">Osnovne informacije</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="../index.html#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>RSA kriptosistem</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+	<amp-pixel src="../../../../../../pixel.wp.com/bf36d.gif?rand=RANDOM&amp;host=rsacryptosystem.wordpress.com&amp;ref=DOCUMENT_REFERRER&amp;amp=1&amp;blog=176621741&amp;v=wpcom&amp;tz=2&amp;user_id=0&amp;post=11&amp;subd=rsacryptosystem"></amp-pixel>
+	<amp-pixel src="../../../../../../pixel.wp.com/b8f67.gif?rand=RANDOM&amp;v=wpcom-no-pv&amp;crypt=UE40eW5QN0p8M2Y%2FRE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJodEk4NDNTNVZYN0t0JUdFWHpbbGgxcT9mTjNaLyV%2BdWF4NXZjZHpXOVZ4YzZyW0ZGVUVEenNGRUU4Lkt5MjJ3aEQmb20lZEpyM3NbeUNTZ0swMWhqYklTYVlHSiZuNE5YcnlIMmRDRT9CMWhBbmxyRTBLS0Fba351bUs2S1NdJTJvSn5TQl02THpIWWlxR25VSXF%2B"></amp-pixel>
+	
+</body>
+
+<!-- Mirrored from rsacryptosystem.wordpress.com/2020/04/29/example-post/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2020 09:20:30 GMT -->
+</html>

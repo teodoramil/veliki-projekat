@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+	>
+
+<channel>
+	<title>RSA kriptosistem</title>
+	<atom:link href="https://rsacryptosystem.wordpress.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://rsacryptosystem.wordpress.com</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 May 2020 20:51:44 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>http://wordpress.com/</generator>
+
+<image>
+	<url>https://rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4.png?w=32</url>
+	<title>RSA kriptosistem</title>
+	<link>https://rsacryptosystem.wordpress.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<cloud domain='rsacryptosystem.wordpress.com' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />
+<atom:link rel="search" type="application/opensearchdescription+xml" href="https://rsacryptosystem.wordpress.com/osd.xml" title="RSA kriptosistem" />
+	<atom:link rel='hub' href='https://rsacryptosystem.wordpress.com/?pushpress=hub'/>
+	<item>
+		<title>Kako spriječiti uspješnu faktorizaciju broja n?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Tue, 19 May 2020 16:49:18 +0000</pubDate>
+				<category><![CDATA[Kriptoanaliza]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=692</guid>
+
+					<description><![CDATA[Postoje mnogi algoritmi za faktorizaciju kao što su Polardov p-1 algoritam, Polardov rho algoritam, GNFS, QS, Fermaov metod itd., ali oni još uvijek ne predstavljaju opasnost po RSA kriptosistem ako se poštuju određena pravila. Čak i najbržem algoritmu za faktorizaciju (GNFS) treba dosta vremena da faktorizuje velike brojeve. Na primjer, potrebno je nekoliko mjeseci da<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/">Continue reading <span class="screen-reader-text">"Kako spriječiti uspješnu faktorizaciju broja&#160;n?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull has-background-dim-20 has-background-dim" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/hacker-4031973_1920-2.jpg');min-height:611px;"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-justify has-background-color has-text-color has-large-font-size">Jedan od napada na RSA je faktorizacija od n gdje napadač pronalazi proste brojeve p i q čiji proizvod daje n. Ako napadač faktorizuje n onda može otkriti φ(n) = (p−1)(q−1), ali i tajni ključ d pomoću Euklidovog algoritma de ≡ 1 (mod φ(n)).</p>
+</div></div>
+
+
+
+<div style="height:39px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-justify has-foreground-dark-color has-text-color">Postoje mnogi algoritmi za faktorizaciju kao što su <em>Polardov p-1 algoritam, Polardov rho algoritam, GNFS, QS, Fermaov metod</em> itd., ali oni još uvijek ne predstavljaju opasnost po RSA kriptosistem ako se poštuju određena pravila. Čak i najbržem algoritmu za faktorizaciju (GNFS) treba dosta vremena da faktorizuje velike brojeve. Na primjer, potrebno je nekoliko mjeseci da se faktorizuje broj koji ima preko 140 cifri.</p>
+
+
+
+<p>U nastavku ćemo pokazati nekoliko primjera napada:</p>
+
+
+
+<p class="has-text-align-center has-background-color has-foreground-dark-background-color has-text-color has-background">POLARDOV P-1 ALGORITAM</p>
+
+
+
+<p class="has-text-align-justify" style="line-height:1.6;">Neka je <strong>n = 713</strong>. Biramo broj <strong>B = 5</strong> i definišemo M tako da M predstavlja proizvod brojeva q<sup>k</sup>. Svaki broj q mora biti prost i manji ili jednak od B, a broj k dobijemo tako što pronađemo log <sub>q</sub> B. </p>
+
+
+
+<p class="has-text-align-justify" style="line-height:1.5;">Prosti brojevi q su:<strong> 2</strong>,<strong>3</strong>,<strong>5.</strong> Dalje računamo log <sub>2</sub> 5 = 2, log <sub>3</sub> 5 = 1, log <sub>5</sub> 5 = 1, te dobijamo da su brojevi k: <strong>2</strong>,<strong>1</strong>,<strong>1</strong>. Slijedi da je M = 2<sup>2</sup>·3<sup>1</sup>·5<sup>1</sup> = 60. </p>
+
+
+
+<p class="has-text-align-justify">Izaberemo broj a koji je relativno prost sa n npr. <strong>a = 2</strong> i tražimo NZD(a<sup>M</sup><sub> </sub>– 1, n). Dobijamo da je NZD(2<sup>60</sup> – 1, 713) = <strong>31</strong>. Pošto je 1 &lt; 31 &lt; 713 zaustavljamo se.</p>
+
+
+
+<p class="has-text-align-justify">Dalje računamo 713/31, te dobijamo 23 koji je takođe prost broj. Faktorizacija je uspješna: <strong>p = 23</strong>,<strong> q = 31</strong>.</p>
+
+
+
+<div style="height:53px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-center has-foreground-dark-background-color has-background">FERMAOV ALGORITAM</p>
+
+
+
+<p class="has-text-align-justify">Neka je <strong>n = 391</strong>. Traže se x i y tako da je <strong>n = x<sup>2</sup> &#8211; y<sup>2</sup></strong> tj. <strong>n = (x-y)(x+y)</strong>. Potrebno je pronaći x tako da je x jednak korijenu iz n + y<sup>2</sup>. Nek je y bilo koji broj veći ili jednak od 1, zaustavljamo se kada dobijemo x koji je cijeli broj. Slijedi:</p>
+
+
+
+<ul><li><strong>√</strong>&nbsp;x = 391 + 1<sup>2</sup> = 392. Korijen iz 392 je 19.7 što nije cijeli broj.</li><li><strong>√</strong>&nbsp;x = 391 + 2<sup>2</sup> = 395. Korijen iz 395 je 19.8 što nije cijeli broj.</li><li><strong>√</strong>&nbsp;x = 391 + 3<sup>2</sup> = 400. Korijen iz 400 je 20 što je cijeli broj. Zaustavljamo se.</li></ul>
+
+
+
+<p class="has-foreground-dark-color has-text-color">Slijedi da je 20<sup>2</sup> = 391 + 3<sup>2</sup> tj. <strong>x = 20 i y = 3</strong>. Odatle dobijamo da je n = (20-3)·(20+3) =&gt; <strong>p = 17 i q = 23</strong>. Faktorizacija je uspješna.</p>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-background-color has-foreground-dark-background-color has-text-color has-background">Da bi se izbjegao ovaj napad preporučuje se da  u RSA tajno izabrani parametri p i q budu veliki prosti brojevi od barem 100 cifara. Njih možemo izabrati na način da prvo generišemo broj x sa traženim brojem cifara, a potom pomoću testova prostosti pronađemo prvi prosti broj koji je veći od x. Tada n = pq ima oko 200 cifara, te se neće moći faktorizovati u razumnom vremenu. Ali treba da vodimo računa da p i q nisu vrlo blizu jer se mogu odrediti posmatranjem prostih brojeva koji su blizu √𝑛. Takođe, brojevi p ± 1 i q ± 1 bi trebalo da imaju barem jedan veliki prosti faktor.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img data-attachment-id="716" data-permalink="https://rsacryptosystem.wordpress.com/paul-bergmeir-fzfh41iuciy-unsplash/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="paul-bergmeir-fzfh41iuciy-unsplash" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=750" src="https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=1024" alt="" class="wp-image-716" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=2048 2048w, https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=768 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+
+<p class="has-text-align-justify">Informatičari smatraju da je nemoguće faktorizovati brojeve duže od 2048 bita na klasičnim računarima. Međutim Šorov algoritam pokazuje da bi to moglo biti efikasno na idealnom kvantnom računaru. U narednom videu je objašnjen primjer faktorizacije broja pomoću Šorovog algoritma:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='750' height='422' src='https://www.youtube.com/embed/FRZQ-efABeQ?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/paul-bergmeir-fzfh41iuciy-unsplash.jpg?w=1024" medium="image" />
+	</item>
+		<item>
+		<title>Ciklični napadi na RSA, opasnost ili ne?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/05/05/ciklicni-napadi/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/05/05/ciklicni-napadi/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Tue, 05 May 2020 13:49:09 +0000</pubDate>
+				<category><![CDATA[Kriptoanaliza]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=275</guid>
+
+					<description><![CDATA[Ciklični napad je napad kod kog se otvoreni tekst uvijek dobija ponovljenim šifrovanjem njegovog šifrata, sve dok se ciklus ne vrati na izvorni šifrovani tekst. Neka je ek(x) = xe (mod n) šifrat. Potrebno je da napadač računa&#160;ek(x)e(mod n), ek(x)e•2(mod n), ek(x)e•3(mod n), itd. Drugim riječima, potrebno je da napadač pomoću javnog ključa iznova šifruje<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/05/05/ciklicni-napadi/">Continue reading <span class="screen-reader-text">"Ciklični napadi na RSA, opasnost ili&#160;ne?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/philipp-katzenberger-iijruoerocq-unsplash.jpg');min-height:598px;"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center" style="font-size:30.5px;">Ovo je napad koji je uvijek uspješan, ali u čemu je začkoljica?</p>
+</div></div>
+
+
+
+<div style="height:45px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-justify has-foreground-dark-color has-text-color"><strong>Ciklični napad je napad kod kog se otvoreni tekst uvijek dobija ponovljenim šifrovanjem njegovog šifrata, sve dok se ciklus ne vrati na izvorni šifrovani tekst. Neka je e<sub>k</sub>(x) = x<sup>e</sup> (mod n) šifrat. Potrebno je da napadač računa&nbsp;e<sub>k</sub>(x)<sup>e</sup>(mod n), e<sub>k</sub>(x)<sup>e•2</sup>(mod n), e<sub>k</sub>(x)<sup>e•3</sup>(mod n), itd. Drugim riječima, potrebno je da napadač pomoću javnog ključa iznova šifruje svaki novodobijeni šifrat, sve dok ne dobije originalni šifrat. S obzirom da je <img width="59" height="27" src="">&nbsp;e<sub>k</sub>(x)<sup>e•k</sup>(mod n) jednak šifratu e<sub>k</sub>(x), onda je prethodni broj <img width="73" height="27" src="">&nbsp;e<sub>k</sub>(x)<sup>e•(k-1)</sup>(mod n) jednak otvorenom tekstu x.</strong></p>
+
+
+
+<div style="height:60px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-large is-resized is-style-default"><img data-attachment-id="495" data-permalink="https://rsacryptosystem.wordpress.com/scalyaffectionateicelandgull-small/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/scalyaffectionateicelandgull-small.gif" data-orig-size="300,270" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="scalyaffectionateicelandgull-small" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/scalyaffectionateicelandgull-small.gif?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/scalyaffectionateicelandgull-small.gif?w=300" src="https://rsacryptosystem.files.wordpress.com/2020/05/scalyaffectionateicelandgull-small.gif?w=300" alt="" class="wp-image-495" width="232" height="209" /></figure>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="line-height:1.5;background-color:#0e576d;"><strong>PRIMJER</strong> <strong>CIKLIČNOG NAPADA</strong></p>
+
+
+
+<p class="has-text-align-justify">Alice šifruje poruku <strong>m = 11</strong> pomoću Bobovog javnog ključa <strong>(3, 51)</strong> i tako dobija šifrat <strong>c = 5</strong>. Eve&nbsp; presreće šifrat c i pokušava otkriti otvoreni tekst pomoću cikličnog napada:</p>
+
+
+
+<ol><li>ciklus:   <strong>5</strong><sup>3</sup> mod 51 = 23</li><li>ciklus:   23<sup>3</sup> mod 51 = 29</li><li>ciklus:   29<sup>3</sup> mod 51 = 11</li><li>ciklus:   <span class="has-inline-color has-secondary-color">11</span><sup>3</sup> mod 51 = <strong>5</strong></li></ol>
+
+
+
+<p class="has-text-align-justify">Nakon što Eve dobije izvornu vrijednost (c = 5) i izvrši prekid šifrovanja, vratiće se jedan korak nazad kako bi otkrila dešifrovanu poruku tj. <strong>x=11</strong>. Ona vrijednost koju je Eve šifrovala te dobila 5, mora biti jednaka onoj vrijednosti koju je Alice šifrovala i dobila šifrat c = 5.</p>
+
+
+
+<div style="height:102px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-text-align-justify has-primary-background-color has-background" style="font-size:20px;">Ciklični napad uvijek može da otkrije otvoreni tekst. &nbsp;Međutim, ovaj napad je nepraktičan i spor kada su parametri veliki. Kako bi se izbjegao potrebno je koristiti velike proste brojeve koji imaju velike proste faktore. Na ovaj način se povećava broj ciklusa, te onemogućava pronalaženje otvorenog teksta u razumnom vremenu.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img data-attachment-id="503" data-permalink="https://rsacryptosystem.wordpress.com/clock_sand_time_166010_1920x1080/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg" data-orig-size="1920,1080" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="clock_sand_time_166010_1920x1080" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=750" src="https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=1024" alt="" class="wp-image-503" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/05/05/ciklicni-napadi/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/scalyaffectionateicelandgull-small.gif?w=300" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/clock_sand_time_166010_1920x1080.jpg?w=1024" medium="image" />
+	</item>
+		<item>
+		<title>Napad na RSA s malim javnim eksponentom. Kako se zaštititi?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-javnim-eksponentom/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-javnim-eksponentom/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Tue, 05 May 2020 13:28:47 +0000</pubDate>
+				<category><![CDATA[Kriptoanaliza]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=262</guid>
+
+					<description><![CDATA[Hastadov napad Do ovog napada dolazi kada se ista poruka m šifruje s nekoliko različitih javnih ključeva (n,e), a da pritom ključevi imaju isti javni eksponent e i različite module n koji su relativno prosti. Pretpostavimo da postoje tri korisnika koji koriste isti javni eksponent e = 3, ali različite &#160;module n da šifruju poruku<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-javnim-eksponentom/">Continue reading <span class="screen-reader-text">"Napad na RSA s malim javnim eksponentom. Kako se&#160;zaštititi?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull has-background-dim-10 has-background-dim" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/hacker-3480124_1920.jpg');background-position:56% 41%;min-height:623px;"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center" style="font-size:20.5px;">Često se koristi mali javni eksponent e jer značajno skraćuje vrijeme šifrovanja. Najmanji mogući javni eksponent koji se može koristiti jeste e = 3, ali izbor malog eksponenta e narušava sigurnost kriptosistema jer ga čini podložnim napadima.</p>
+</div></div>
+
+
+
+<div style="height:31px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-center has-background-color has-foreground-dark-background-color has-text-color has-background"><strong>Hastadov napad</strong></p>
+
+
+
+<p class="has-text-align-justify"><strong>Do ovog napada dolazi kada se ista poruka m šifruje s nekoliko različitih javnih ključeva (n,e), a da pritom ključevi imaju isti javni eksponent e i različite module n koji su relativno prosti.</strong></p>
+
+
+
+<p class="has-text-align-justify">Pretpostavimo da postoje tri korisnika koji koriste isti javni eksponent e = 3, ali različite &nbsp;module n da šifruju poruku m. Napadač može da sazna šifrate:</p>
+
+
+
+<p class="has-text-align-center"><strong>c<sub>1</sub> </strong>≡<strong> m<sup>3</sup> (mod n<sub>1</sub>), c<sub>2</sub> </strong>≡<strong> m<sup>3</sup> (mod n<sub>2</sub>), c<sub>3</sub> </strong>≡<strong> m<sup>3</sup> (mod n<sub>3</sub>).</strong></p>
+
+
+
+<p class="has-text-align-justify">Dalje pomoću Kineske teoreme o ostacima pronalazi rješenje kongruencija:</p>
+
+
+
+<p class="has-text-align-center"><strong>x </strong>≡<strong> c<sub>1</sub> (mod n<sub>1</sub>), x </strong>≡ <strong>c<sub>2</sub> (mod n<sub>2</sub>), x </strong>≡<strong> c3 (mod n<sub>3</sub>).</strong></p>
+
+
+
+<p class="has-text-align-justify">Pošto x ima osobinu da x ≡ m<sup>3</sup> (mod n<sub>1</sub>·n<sub>2</sub>·n<sub>3</sub>) i pošto je m<sup>3</sup> &lt; n<sub>1</sub>·n<sub>2</sub>·n<sub>3</sub>, slijedi da je <strong>x = m<sup>3</sup></strong>. Napadač dobija originalnu poruku m ukoliko izračuna <img width="24" height="27" src=""><strong><sup>3</sup>√x.</strong></p>
+
+
+
+<div style="height:88px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img data-attachment-id="516" data-permalink="https://rsacryptosystem.wordpress.com/vagueimaginativejapanesebeetle-size_restricted/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/vagueimaginativejapanesebeetle-size_restricted.gif" data-orig-size="401,251" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vagueimaginativejapanesebeetle-size_restricted" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/vagueimaginativejapanesebeetle-size_restricted.gif?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/vagueimaginativejapanesebeetle-size_restricted.gif?w=401" src="https://rsacryptosystem.files.wordpress.com/2020/05/vagueimaginativejapanesebeetle-size_restricted.gif?w=401" alt="" class="wp-image-516" width="317" height="198" /></figure>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#1f500e;"><strong>PRIMJER NAPADA MALIM JAVNIM EKSPONENTOM</strong></p>
+
+
+
+<p class="has-text-align-justify">Tri korisnika koriste različite module &nbsp;n<sub>1</sub> = 329, n<sub>2</sub> = 341, n<sub>3</sub> = 377, dok im je javni eksponent e=3. Sva tri korisnika šifruju poruku m=42, te dobijaju šifrate:</p>
+
+
+
+<ul><li>c<sub>1</sub> = 42<sup>3</sup> (mod 329) = 63</li><li>c<sub>2</sub> = 42<sup>3</sup> (mod 341) = 91</li><li>c<sub>3</sub> = 42<sup>3</sup> (mod 377) = 196</li></ul>
+
+
+
+<p class="has-text-align-justify">Prilikom slanja poruke protivnik je saznao šifrate, te želi saznati zajednički otvoreni tekst m. Zatim, dobija linearni sistem kongruencija x ≡ c<sub>1</sub> (mod n<sub>1</sub>), x ≡ c<sub>2</sub> (mod n<sub>2</sub>), x ≡ c<sub>3</sub> (mod n<sub>3</sub>):</p>
+
+
+
+<p class="has-text-align-center"><strong>x </strong>≡<strong> 63 (mod 329), x </strong>≡<strong> 91 (mod 341), x </strong>≡ <strong>196 (mod 377)</strong>.</p>
+
+
+
+<p>Slijedi da je:</p>
+
+
+
+<ul><li>c<sub>1</sub> = 63, n<sub>1</sub> = 329;    c<sub>2</sub> = 91, n<sub>2</sub> = 341;     c<sub>3</sub> = 196, n<sub>3</sub> = 377;</li><li>n = n<sub>1</sub> · n<sub>2</sub> · n<sub>3</sub> = 329 · 341 · 377 = 42295253,</li><li>p<sub>1</sub><strong> </strong>= n/n<sub>1</sub> = 128557;     p<sub>2</sub> = n/n<sub>2</sub> = 124033;     p<sub>3</sub> = n/n<sub>3</sub> = 112189,</li></ul>
+
+
+
+<p>Pomoću kineske teoreme o ostacima računa:</p>
+
+
+
+<ul><li>p<sub>1</sub> · x<sub>1</sub> (mod n1) = c<sub>1</sub>   <strong>=&gt;</strong>   128557 x<sub>1</sub> (mod 329) = 63    <strong>=&gt;</strong>    <strong>x<sub>1</sub> = 252</strong></li><li>p<sub>2</sub> · x<sub>2</sub> (mod n2) = c<sub>2</sub>   <strong>=&gt;</strong>   124033 x<sub>2</sub> (mod 341) = 91    <strong>=&gt;    x<sub>2</sub> = 340</strong></li><li>p<sub>3</sub> · x<sub>3</sub> (mod n3) = c<sub>3</sub>   <strong>=&gt;</strong>   112189 x<sub>3</sub> (mod 377) = 196  <strong>=&gt;    x<sub>3</sub> = 90</strong></li></ul>
+
+
+
+<p class="has-text-align-justify">x = p<sub>1</sub> · x<sub>1</sub> + p<sub>2</sub> · x<sub>2</sub> + p<sub>3</sub> · x<sub>3</sub> = 128557·252 + 124033·340 + 112189·90 =  84664594 (mod 329·341·377) =                74088 (mod 42295253),</p>
+
+
+
+<p class="has-text-align-justify">te dobija x = 74088 i uvrštava ga u formulu <strong>m = <sup>3</sup>√x</strong> . Slijedi da je m =<strong> <sup>3</sup>√</strong>74088.  Odatle dobija da je  <strong>m = 42.</strong></p>
+
+
+
+<p>Možete pogledati naredni video u kom je takođe detaljno objašnjen napad:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='750' height='422' src='https://www.youtube.com/embed/aS57JCzJw_o?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+
+
+
+<div style="height:80px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-text-align-justify has-background-color has-foreground-dark-background-color has-text-color has-background" style="font-size:20px;">Da bi se izbjegao ovaj napad preporučena vrijednost za e je 2<sup>16</sup> + 1, koji je dovoljno velik da bi onemogućio sve poznate napade na RSA sa malim eksponentom. Bilo koji veći broj zahtijevao bi barem još jednu operaciju množenja ili dijeljenja, čime bi se proces računanja dodatno odužio.</p>
+
+
+
+<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img data-attachment-id="578" data-permalink="https://rsacryptosystem.wordpress.com/30709/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg" data-orig-size="1920,1080" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="30709" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=750" src="https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=1024" alt="" class="wp-image-578" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-javnim-eksponentom/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/vagueimaginativejapanesebeetle-size_restricted.gif?w=401" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/30709.jpg?w=1024" medium="image" />
+	</item>
+		<item>
+		<title>Kako izgleda napad na RSA s malim tajnim eksponentom?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-tajnim-eksponentom/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-tajnim-eksponentom/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Tue, 05 May 2020 12:16:52 +0000</pubDate>
+				<category><![CDATA[Kriptoanaliza]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=246</guid>
+
+					<description><![CDATA[Wienerova teorema glasi: Neka je n = pq i p &#60; q &#60; 2p te neka je e &#60; ϕ(n) i d &#60; 1/3 n0.25. Tada postoji polinomijalni algoritam koji iz poznavanja javnog ključa (n,e) računa d. Pošto je 𝑘/𝑑 prema Legendreovom teoremu neka konvergenta razvoja u verižni razlomak od 𝑒/𝑛, potrebno je da izračunamo<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-tajnim-eksponentom/">Continue reading <span class="screen-reader-text">"Kako izgleda napad na RSA s malim tajnim&#160;eksponentom?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull has-background-dim-20 has-background-dim" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/hacker-4703109_1920.jpg');min-height:604px;"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center" style="font-size:21.5px;">Da bi se skratilo vrijeme računanja često se bira mala vrijednost tajnog ključa d. Kanadski kriptolog Michael Wiener je pokazao da postoji efikasan algoritam koji može da razbije šifru kada je izabran mali tajni eksponent d. Ovaj napad se naziva Wienerov napad.</p>
+</div></div>
+
+
+
+<div style="height:57px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Wienerova teorema glasi:<em> Neka je n = pq i p &lt; q &lt; 2p te neka je e &lt; </em>ϕ<em>(n) i d &lt; 1/3 n<sup>0.25</sup>. Tada postoji polinomijalni algoritam koji iz poznavanja javnog ključa (n,e) računa d.</em></p>
+
+
+
+<p>Pošto je 𝑘/𝑑 prema Legendreovom teoremu neka konvergenta razvoja u verižni razlomak od 𝑒/𝑛, potrebno je da izračunamo sve konvergente od 𝑒/𝑛, te da testiramo koja zadovoljava uslov (x<sup>e</sup>)<sup>d</sup> ≡ x( mod n) za nasumično odabrani x.</p>
+
+
+
+<p class="has-text-align-justify">U nastavku ćete radi lakšeg razumijevanja vidjeti kako izgleda ovaj napad u praksi i na koji način se može izbjeći. </p>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#2b99bb;"><strong>PRIMJER NAPADA SA JAVNIM EKSPONENTOM</strong></p>
+
+
+
+<p class="has-text-align-justify">Dat je modul <strong>n = 7064009</strong> i javni eksponent <strong>e = 5773091</strong>. Pretpostavimo da tajni eksponent d zadovoljava &nbsp;&nbsp;d &lt; 18. Prvo računamo razvoj broja <sup>e</sup>/<sub>n</sub> , koji je u ovom slučaju <sup>5773091</sup>/<sub>7064009</sub> , u verižni razlomak.</p>
+
+
+
+<p>Verižni razlomak je razlomak oblika:</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="250" data-permalink="https://rsacryptosystem.wordpress.com/downlofdad-1/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png" data-orig-size="305,162" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="downlofdad-1" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png?w=305" src="https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png?w=305" alt="" class="wp-image-250" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png 305w, https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png?w=300 300w" sizes="(max-width: 305px) 100vw, 305px" /></figure>
+
+
+
+<p class="has-text-align-justify">koji se kraće zapisuje kao x = [a<sub>0</sub>; a<sub>1</sub>, a<sub>2 </sub>&#8230; a<sub>n</sub>], gdje su a<sub>0</sub>,a<sub>1</sub>,&#8230;,a<sub>n</sub> koeficijenti iz Euklidovog algoritma primijenjenog na x. Slijedi:</p>
+
+
+
+<ul><li>57730910 = 7064009 ·<strong> 0 </strong>+ 57730910,</li><li>7064009 = 5773091 · <strong>1 </strong>+<strong> </strong>1290918,</li><li>5773091 = 1290918 · <strong>4 </strong>+<strong> </strong>609419,</li><li>1290918 = 609419 · <strong>2 </strong>+<strong> </strong>72080 &#8230;</li></ul>
+
+
+
+<p class="has-text-align-justify">Tada dobijemo x= [0; 1, 4, 2, 8, 2, 5, 38, 1, 1, 2, 4, 2, 3]. Zatim je potrebno izračunati pripadne konvergente verižnog razvoja.</p>
+
+
+
+<p>Konvergentama verižnog razvoja nazivamo razlomke k<sub>p</sub>/d<span style="font-size:15px;">p</span> , gdje je p≤ n, za koje vrijedi:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td class="has-text-align-left" data-align="left">k<sub>0</sub> = a<sub>0</sub></td><td>d<sub>0</sub> = 1</td></tr><tr><td class="has-text-align-left" data-align="left">k<sub>1</sub> = a<sub>0</sub>a<sub>1 </sub>+ 1</td><td>d<sub>1</sub> = a<sub>1</sub></td></tr><tr><td class="has-text-align-left" data-align="left">k<sub>p</sub> = a<sub>p</sub>k<sub>p−1</sub> + k<sub>p−2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>d<sub>p</sub> = a<sub>p</sub>d<sub>p−1</sub> + d<sub>p−2</sub>                  </td></tr></tbody></table></figure>
+
+
+
+<ul><li> k<sub>0</sub>/q<sub>0</sub> = 0/1 = <strong>0</strong>;&nbsp;&nbsp; </li><li>k<sub>1</sub>/q<sub>1</sub> = 1/1 = <strong>1</strong>; </li><li>k<sub>2</sub>/q<sub>2</sub> = 4/4+1 = <strong>4/5</strong></li><li>k<sub>3</sub>/q<sub>3</sub> =<sub> </sub>8+1/10+1 = <strong>9/11</strong> &#8230;</li></ul>
+
+
+
+<p class="has-text-align-justify">Dobijamo: 0, 1, <sup>4</sup>/<sub>5</sub> , <sup>9</sup>/<sub>11</sub> ,<sup>76</sup>/<sub>93</sub> , <sup>161</sup>/<sub>197</sub> , <sup>881</sup>/<sub>1078</sub> , <sup>33639</sup>/<sub>41161</sub> , <sup>34520</sup>/<sub>42239</sub> , <sup>68159</sup>/<sub>83400</sub> , <sup>170838</sup>/<sub>209039</sub> , <sup>751551</sup>/<sub>919556</sub> , <sup>1673860</sup>/<sub>2048151</sub> , <sup>5773091</sup>/<sub>7064009</sub> . S obzirom da je d &lt; 18, testiramo koji od imenioca 5 i 11 zadovoljava uslov (x<sup>e</sup>)<sup>d</sup> ≡ x(mod n) &nbsp;za nasumično odabrani x, npr. x = 2. Tako dobijamo da je d = 11.</p>
+
+
+
+<figure class="wp-block-image size-large is-style-rounded"><img data-attachment-id="522" data-permalink="https://rsacryptosystem.wordpress.com/illwelcomegull-size_restricted/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/illwelcomegull-size_restricted.gif" data-orig-size="252,252" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="illwelcomegull-size_restricted" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/illwelcomegull-size_restricted.gif?w=252" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/illwelcomegull-size_restricted.gif?w=252" src="https://rsacryptosystem.files.wordpress.com/2020/05/illwelcomegull-size_restricted.gif?w=252" alt="" class="wp-image-522" /></figure>
+
+
+
+<div style="height:66px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-text-align-justify has-background-color has-foreground-dark-background-color has-text-color has-background" style="font-size:20px;">Da bi se izbjegao ovaj napad potrebno je koristiti veliki d (bar 256 bitni). Druga mogućnost je korištenje velikog javnog eksponenta e. Ako je e &gt; n<sup>1.5 </sup>&nbsp;napad se neće moći ostvariti bez obzira na veličinu tajnog eksponenta d. Međutim, velike vrijednosti eksponenta e dovode do smanjenja efikasnosti jer povećavaju vrijeme šifrovanja.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img data-attachment-id="723" data-permalink="https://rsacryptosystem.wordpress.com/shane-avery-ohnvp41adze-unsplash/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg" data-orig-size="5598,3657" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="shane-avery-ohnvp41adze-unsplash" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=750" src="https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=1024" alt="" class="wp-image-723" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=2048 2048w, https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=768 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/05/05/napad-s-malim-tajnim-eksponentom/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/downlofdad-1.png?w=305" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/illwelcomegull-size_restricted.gif?w=252" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/shane-avery-ohnvp41adze-unsplash.jpg?w=1024" medium="image" />
+	</item>
+		<item>
+		<title>Šta je RSA kriptosistem?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/04/29/example-post-3/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/04/29/example-post-3/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Wed, 29 Apr 2020 09:13:34 +0000</pubDate>
+				<category><![CDATA[Osnovne informacije]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=9</guid>
+
+					<description><![CDATA[Ako želimo da što bolje razumijemo RSA, potrebno je da se prvo upoznamo sa osnovnim pojmovima u kriptografiji. Zadatak kriptografije jeste da omogući komunikaciju između dvije osobe, tako da osoba kojoj poruke nisu namijenjene ne može da ih razumije. Pošiljaoca ćemo nazvati Alice, primaoca Bob, a napadača Eve. Poruka koju Alice šalje Bobu i koja<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/04/29/example-post-3/">Continue reading <span class="screen-reader-text">"Šta je RSA&#160;kriptosistem?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull has-background-dim-10 has-background-dim has-parallax is-style-default" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/1519115.jpg');min-height:550px;"><div class="wp-block-cover__inner-container">
+<p class="has-drop-cap has-text-align-left" style="font-size:26px;">RSA je jedan od najpoznatijih kriptosistema koji je nastao 1977. a i dan danas se široko koristi..</p>
+</div></div>
+
+
+
+<p class="has-text-align-justify">Ako želimo da što bolje razumijemo RSA, potrebno je da se prvo upoznamo sa osnovnim pojmovima u kriptografiji.</p>
+
+
+
+<p class="has-text-align-justify">Zadatak kriptografije jeste da omogući komunikaciju između dvije osobe, tako da osoba kojoj poruke nisu namijenjene ne može da ih razumije. Pošiljaoca ćemo nazvati <em>Alice</em>,  primaoca <em>Bob</em>, a napadača <em>Eve</em>. Poruka koju Alice šalje Bobu i koja treba da se zaštiti se naziva <strong>otvoreni tekst</strong>. Alice koristi <strong>ključ šifrovanja</strong> kako bi transformisala otvoreni tekst, te onemogućila Eve da ga razumije. Ovaj proces se naziva <strong>šifrovanje</strong>, a rezultat šifrovanja se naziva<strong> šifrat</strong>. Potom ona šifrat šalje Bobu. Bob, zatim, koristi <strong>ključ dešifrovanja</strong> kako bi iz šifrata dobio otvoreni tekst. Taj proces se naziva <strong>dešifrovanje.</strong> </p>
+
+
+
+<div style="height:36px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="184" data-permalink="https://rsacryptosystem.wordpress.com/sdfa2/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png" data-orig-size="848,269" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="sdfa2" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=750" src="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=848" alt="" class="wp-image-184" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png 848w, https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=768 768w" sizes="(max-width: 848px) 100vw, 848px" /></figure>
+
+
+
+<div style="height:20px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-justify">Sljedeće što je bitno utvrditi jeste razlika između simetričnih i asimetričnih kriptosistema.</p>
+
+
+
+<p class="has-text-align-justify"><strong>Simetrični kriptosistem</strong> jeste onaj kod koga se i za šifrovanje i dešifrovanje poruke koristi isti ključ. Baš zato, razmjena ključeva mora da se obavlja putem zaštićenog kanala. Najpouzdaniji način razmjene ključeva jeste fizički susret dvije osobe. Ovakav kriptosistem se još naziva i kriptosistem s tajnim ključem jer sigurnost zavisi od tajnosti ključa.</p>
+
+
+
+<p class="has-text-align-justify"><strong>Asimetrični kriptosistem</strong> jeste onaj kod koga se za šifrovanje i dešifrovanje koriste dva različita ključa.  Ključ za šifrovanje je javni i dostupan je svima, dok je ključ za dešifrovanje tajni.  To znači da bilo ko može da šifruje poruku pomoću javnog ključa, ali samo osoba kojoj je poruka upućena može da dešifruje poruku koristeći svoj tajni ključ. Baš zato se i zovu kriptosistemi javnog ključa.</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="459" data-permalink="https://rsacryptosystem.wordpress.com/sdfa/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png" data-orig-size="673,224" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="sdfa" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png?w=673" src="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png?w=673" alt="" class="wp-image-459" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png 673w, https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png?w=300 300w" sizes="(max-width: 673px) 100vw, 673px" /><figcaption>Shema asimetričnog kriptosistema</figcaption></figure>
+
+
+
+<p>Ukoliko se komunikacija odvija između više ljudi tada je potrebno da svi korisnici stave svoje javne ključeve u neku javnu datoteku. Datoteka mora biti takva da se javni ključevi ne mogu mijenjati. Ako Alice želi poslati poruku Bobu, potrebno je da iz datoteke pročita njegov javni ključ uz pomoću kog će da izvrši šifrovanje. Pošto svako može pristupiti javnom ključu, tada se svako može i predstaviti kao Alice. Zato dolazi do pitanja vjerodostojnosti poruke koja se može riješiti pomoću potpisa.</p>
+
+
+
+<div style="height:26px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-justify">RSA je <em>kriptosistem sa</em> <em>javnim ključem</em> čiji su tvorci <strong>Ronald Rivest</strong>, <strong>Leonard Ejdlman</strong> i <strong>Adi Šamir</strong>. RSA, u stvari, predstavlja akronim njihovih prezimena (<strong>R</strong>ivest–<strong>S</strong>hamir–<strong>A</strong>dleman). U RSA algoritmu ključnu ulogu vrši izbor velikih prostih brojeva pri šifrovanju (100 i više cifara), jer što je broj veći to ga je teže rastaviti na faktore. Ovaj kriptosistem implementira dvije važne ideje:</p>
+
+
+
+<ol><li><em>Korištenje javnih ključeva</em>: Omogućava šifrovanje poruke bez potrebe za razmjenom ključeva preko zaštićenog komunikacionog kanala, ali i povećava sigurnost jer se tajni ključ ne dijeli ni sa kim.</li><li><em>Digitalni potpis: </em>Omogućava rješavanje problema vjerodostojnosti i autentičnosti poruke. Pošto se prilikom potpisivanja koristi tajni ključ koji ne zna niko osim osobe koja ga posjeduje, ne može se izvršiti lažiranje potpisa. Samim tim, ni pošiljalac ne može poreći slanje poruke.</li></ol>
+
+
+
+<p class="has-text-align-justify">Ove ideje se široko koriste u bankarstvu, kupovini i prodaji preko interneta, elektronskoj pošti, elektronskom poslovanju itd.</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="456" data-permalink="https://rsacryptosystem.wordpress.com/rupixen-com-q59hmzk38eq-unsplash/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="rupixen-com-q59hmzk38eq-unsplash" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=750" src="https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=1024" alt="" class="wp-image-456" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=2048 2048w, https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=768 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<div style="height:63px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>U narednom videu možete saznati još više o RSA:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='750' height='422' src='https://www.youtube.com/embed/wXB-V_Keiu8?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/04/29/example-post-3/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa2.png?w=848" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/sdfa.png?w=673" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/rupixen-com-q59hmzk38eq-unsplash.jpg?w=1024" medium="image" />
+	</item>
+		<item>
+		<title>Kako se RSA algoritam implementira?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/04/29/example-post-2/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/04/29/example-post-2/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Wed, 29 Apr 2020 11:13:33 +0000</pubDate>
+				<category><![CDATA[Osnovne informacije]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=10</guid>
+
+					<description><![CDATA[RSA algoritam uključuje četiri koraka: Generisanje ključeva Distribucija ključeva Šifrovanje poruke Dešifrovanje poruke Generisanje ključeva Odaberu se ili slučajno generišu dva velika prosta broja p i q. Iz sigurnosnih razloga, cijeli brojevi p i q treba da budu odabrani nasumično i treba da budu slični po veličini, ali da se razlikuju u dužini za nekoliko<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/04/29/example-post-2/">Continue reading <span class="screen-reader-text">"Kako se RSA algoritam&#160;implementira?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull has-background-dim-10 has-background-dim" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/1424805-1.jpg');min-height:474px;"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center has-large-font-size"></p>
+</div></div>
+
+
+
+<p><em>RSA algoritam uključuje četiri koraka: </em></p>
+
+
+
+<ol><li><strong>Generisanje ključeva</strong></li><li><strong>Distribucija ključeva</strong></li><li><strong>Šifrovanje poruke</strong></li><li><strong>Dešifrovanje poruke</strong></li></ol>
+
+
+
+<div style="height:27px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-center has-background-color has-foreground-background-color has-text-color has-background"><strong>Generisanje ključeva</strong></p>
+
+
+
+<ol><li><em><strong>Odaberu se ili slučajno generišu dva velika prosta broja p i q.</strong></em></li></ol>
+
+
+
+<ul><li>Iz sigurnosnih razloga, cijeli brojevi p i q treba da budu odabrani nasumično i treba da budu slični po veličini, ali da se razlikuju u dužini za nekoliko cifara kako bi faktorizacija bila teža; p i q se čuvaju u tajnosti.</li></ul>
+
+
+
+<p>      <strong>2.</strong> <strong><em>Izračuna se </em>n=p·q</strong></p>
+
+
+
+<ul><li>n se koristi kao modul i za javne i za privatne ključeve. Njegova dužina, obično izražena u bitovima, je dužina ključa. Takođe, n je dio javnog ključa.</li></ul>
+
+
+
+<p>     <strong> 3. <em>Izračuna se Ojlerovu funkciju </em>ϕ<em>(</em>n)= (p−1)·(q−1)</strong></p>
+
+
+
+<ul><li>ϕ(n) se čuva u tajnosti.</li></ul>
+
+
+
+<p>      <strong>4</strong>. <strong><em>Odabere se cjelobrojna vrijednost e pri čemu</em> 1 &lt; e &lt; ϕ(n) <em>takav da je</em> (e,ϕ(n))=1<em> tj. da je relativno prost sa</em> ϕ(n).</strong></p>
+
+
+
+<ul><li>Poželjno je odabrati što manji <em>e</em> kako bi se šifrovanje x<sup>e</sup> (mod n) odvijalo brže. Kako broj operacija u šifrovanju zavisi od veličine broja e i broja jedinica u binarnom zapisu od e, jedan od čestih izbora jeste e = 3. Ali, s obzirom da upravo izbor malog broja e narušava sigurnost kriptosistema, najbolji izbor je broj e = 2<sup>16</sup> + 1 = 65537. Taj broj je pogodan jer je prost te dovoljno velik za izbjegavanje napada malim eksponentom. Bilo koji veći broj zahtijevao bi barem još jednu operaciju množenja ili dijeljenja, čime bi se proces računanja dodatno odužio. Takođe, e je dio javnog ključa.</li></ul>
+
+
+
+<p>        <strong>5</strong>.<em> </em><strong><em>Upotrebom proširenog Euklidovog algoritma izračunati jedinstveni cijeli broj </em>d, 1 &lt; d &lt; ϕ(n)</strong> <strong><em>takav da je</em> de </strong>≡<strong> 1 (mod ϕ(n)) tj. de (mod ϕ(n)) = 1</strong>.</p>
+
+
+
+<ul><li>d se čuva u tajnosti.</li><li>inverzni element d od e se može odrediti iz Euklidovog algoritma, jer ima osobinu da postoji cijeli broj c za koji je e·d + c·ϕ(n) = 1.</li></ul>
+
+
+
+<p>         <strong>6. <em>Javni ključ je par (n,e), a tajni ključ je d.</em></strong></p>
+
+
+
+<p>U nastavku možete pogledati video:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='750' height='422' src='https://www.youtube.com/embed/oOcTVTpUsPQ?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+
+
+
+<div style="height:20px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-center has-foreground-background-color has-background"><strong>Distribucija ključeva</strong></p>
+
+
+
+<p class="has-text-align-justify has-foreground-color has-background-background-color has-text-color has-background">Bob želi da pošalje poruku Alice. Da bi to uradio on mora da zna njen javni ključ (n,e) za šifrovanje poruke, dok Alice mora koristiti njen privatni ključ (d) za dešifrovanje poruke. Zato, Alice prenosi svoj javni ključ (n, e) Bobu putem rute koja ne mora nužno da bude tajna, kako bi joj on mogao poslati svoje šifrovane poruke. Privatni ključ (d) nikada se ne distribuira.</p>
+
+
+
+<div style="height:50px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-image is-style-default"><figure class="aligncenter size-large is-resized"><img data-attachment-id="470" data-permalink="https://rsacryptosystem.wordpress.com/encrypt-2-569399-1/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png" data-orig-size="256,256" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="encrypt-2-569399-1" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png?w=256" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png?w=256" src="https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png?w=256" alt="" class="wp-image-470" width="172" height="172" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png?w=172 172w, https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png 256w" sizes="(max-width: 172px) 100vw, 172px" /></figure></div>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="line-height:1.5;background-color:#34545c;"><strong>Šifrovanje poruke</strong></p>
+
+
+
+<p>Da <em>bi Alice šifrovala poruku  x  Bobu mora da:</em></p>
+
+
+
+<ol><li>Pristupi Bobovom javnom ključu (n,e). </li><li>Izračuna šifrat e<sub>k</sub>(x)= x<sup>e</sup> (mod n).</li><li>Pošalje šifrat e<sub>k</sub>(x) Bobu.</li></ol>
+
+
+
+<div style="height:36px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#325058;"><strong>Dešifrovanje poruke</strong></p>
+
+
+
+<p class="has-text-align-justify"><em>Kako bi dobio otvoreni tekst x iz šifrata e<sub>k</sub>(x), Bob treba da:</em></p>
+
+
+
+<ol><li>Upotrijebi tajni ključ d za dobijanje x = (e<sub>k</sub>(x))<sup>d</sup> (mod n).</li></ol>
+
+
+
+<p>Slijedi još jedan video:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='750' height='422' src='https://www.youtube.com/embed/4zahvcJ9glg?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+
+
+
+<div style="height:110px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-pullquote alignwide has-background has-foreground-dark-background-color is-style-solid-color"><blockquote class="has-text-color has-background-color"><p>Encryption&#8230;is a powerful defensive weapon for free people. It offers a technical guarantee of privacy, regardless of who is running the government&#8230; It&#8217;s hard to think of a more powerful, less dangerous tool for liberty.</p><cite><a href="https://www.azquotes.com/author/4274-Esther_Dyson" target="_blank" rel="noreferrer noopener">Esther Dyson</a></cite></blockquote></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/04/29/example-post-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/encrypt-2-569399-1.png?w=256" medium="image" />
+	</item>
+		<item>
+		<title>Koliko je, u stvari, RSA kriptosistem siguran?</title>
+		<link>https://rsacryptosystem.wordpress.com/2020/04/29/example-post/</link>
+					<comments>https://rsacryptosystem.wordpress.com/2020/04/29/example-post/#respond</comments>
+		
+		<dc:creator><![CDATA[Teodora Milanović]]></dc:creator>
+		<pubDate>Wed, 29 Apr 2020 11:13:32 +0000</pubDate>
+				<category><![CDATA[Osnovne informacije]]></category>
+		<guid isPermaLink="false">http://rsacryptosystem.wordpress.com/?p=11</guid>
+
+					<description><![CDATA[RSA se može smatrati sigurnim kriptosistemom, pod uslovom da se ispravno koristi. Svi dosadašnji napadi nam daju mogućnost da uočimo greške pri implementaciji RSA i izboru parametara, te da ih u skladu sa tim izbjegavamo. Više o tome na stranici NAPADI NA RSA. Naglim napretkom današnjih računara javila se potreba za povećanjem sigurnosti, odnosno zaštite<a class="more-link" href="https://rsacryptosystem.wordpress.com/2020/04/29/example-post/">Continue reading <span class="screen-reader-text">"Koliko je, u stvari, RSA kriptosistem&#160;siguran?"</span></a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull has-background-dim-10 has-background-dim is-style-bottom-wave" style="background-image:url('https://rsacryptosystem.files.wordpress.com/2020/05/cryptography.jpg');background-position:82% 96%;min-height:618px;"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center has-large-font-size"></p>
+</div></div>
+
+
+
+<p class="has-text-align-justify">RSA se može smatrati sigurnim kriptosistemom, pod uslovom da se ispravno koristi. Svi dosadašnji napadi nam daju mogućnost da uočimo greške pri implementaciji RSA i izboru parametara, te da ih u skladu sa tim izbjegavamo. Više o tome na stranici <span style="text-decoration:underline;"><span class="has-inline-color has-secondary-color"><a href="https://rsacryptosystem.wordpress.com/category/kriptoanaliza/" target="_blank" rel="noreferrer noopener">NAPADI NA RSA</a>.</span></span></p>
+
+
+
+<p class="has-text-align-justify">Naglim napretkom današnjih računara javila se potreba za povećanjem sigurnosti, odnosno zaštite podataka. Sigurnost RSA kriptosistema bazira se na teškoći faktorizacije velikih brojeva i na današnjim računarima takav problem nije lako rješiv pa su ti sistemi još uvijek sigurni. Takođe, činjenica da algoritmi za faktorizaciju brojeva postaju svakim danom sve bolji, ali i neumoljiv razvoj kompjutera učinili su da 512 bitni RSA algoritam nije više dovoljan za bezbjedno šifrovanje poruka. Međutim, ključeve dužine 512 bitova (155 cifara) nije moguće probiti na današnjim ličnim računarima. Za to se koriste složeni računarski sistemi, ali su oni skupi i teško dostupni. Dužina ključeva za RSA algoritam je uglavnom 1024 bita. Za njih se pretpostavlja da će biti bezbjedni barem još 15-tak godina. Ali za potpunu sigurnost preporučuje se korištenje ključeva koji su bar 2048 bita dugi. Naravno, sve u zavisnosti od važnosti informacije koju želimo da šifrujemo. </p>
+
+
+
+<p class="has-text-align-justify">Kriptosistemi nikad nisu bili neprobojni. Njihova sigurnost bazira se na činjenici da treba dosta vremena da se probije šifra na klasičnim računarima. Brojni informatičari čak smatraju da je praktično nemoguće faktorizovati brojeve koji su duži od 2048 bita. Ali, sa razvojem tehnologije, pretpostavlja se da će problem faktorizacije biti lako rješiv u budućnosti. Kao primjer se mogu uzeti kvantni računari i Šorov algoritam. RSA je zasnovan na pretpostavci da je računarski neizvodljivo rastaviti veliki broj na proste činioce u razumnom vremenu. Međutim, Šorov algoritam pokazuje da bi to moglo biti efikasno na idealnom kvantnom računaru, te da bi se sa lakoćom mogao faktorizovati broj duži od 2048 bita. Kako je time narušena i sigurnost RSA kriptosistema to je motivisalo naučnike da otpočnu istraživanje novih kriptosistema koji bi bili sigurni od kvantnih računara. Nazvani su post-kvantna kriptografija.</p>
+
+
+
+<p class="has-text-align-justify">Ipak, kvantni računari  još ne postoje u obliku u kom bi bili konkurencija klasičnim računarima. Smatra se da bi kvantni računari sa 20 miliona qubita mogli da probiju 2048-bitnu enkripciju za samo 8 sati! Ali, današnji najbolji kvantni procesor <em>Bristlecone</em> ima tek 72 qubita. Samim tim, zaključujemo da je RSA još uvijek siguran algoritam za šifrovanje podataka.</p>
+
+
+
+<p>U nastavku možete pogledati jedan zanimljiv video na ovu temu:</p>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe class='youtube-player' width='750' height='422' src='https://www.youtube.com/embed/6H_9l9N3IXU?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe>
+</div></figure>
+
+
+
+<p>IBM-ov kvantni računar sa 50 qubita:</p>
+
+
+
+<div class="wp-block-jetpack-slideshow aligncenter" data-autoplay="true" data-delay="3" data-effect="slide"><div class="wp-block-jetpack-slideshow_container swiper-container"><ul class="wp-block-jetpack-slideshow_swiper-wrapper swiper-wrapper"><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-485" data-id="485" src="https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=1024" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg 1800w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-486" data-id="486" src="https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=1024" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=1024 1024w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg 1800w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-487" data-id="487" src="https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=683" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=683 683w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=100 100w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=200 200w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=768 768w, https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg 1200w" sizes="(max-width: 683px) 100vw, 683px" /></figure></li></ul><a class="wp-block-jetpack-slideshow_button-prev swiper-button-prev swiper-button-white" role="button"></a><a class="wp-block-jetpack-slideshow_button-next swiper-button-next swiper-button-white" role="button"></a><a aria-label="Pause Slideshow" class="wp-block-jetpack-slideshow_button-pause" role="button"></a><div class="wp-block-jetpack-slideshow_pagination swiper-pagination swiper-pagination-white"></div></div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rsacryptosystem.wordpress.com/2020/04/29/example-post/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:content url="https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">xnyctosaurus</media:title>
+		</media:content>
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/ibm6-1-1.jpg?w=1024" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/ibm11-1-1.jpg?w=1024" medium="image" />
+
+		<media:content url="https://rsacryptosystem.files.wordpress.com/2020/05/ibm13-1-1.jpg?w=683" medium="image" />
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from rsacryptosystem.wordpress.com/primjeri/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2020 09:18:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>RSA kriptosistem</title>
+<link rel='dns-prefetch' href='http://s2.wp.com/' />
+<link rel='dns-prefetch' href='http://s1.wp.com/' />
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel='dns-prefetch' href='http://wordpress.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel="alternate" type="application/rss+xml" title="RSA kriptosistem &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="RSA kriptosistem &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="RSA kriptosistem &raquo;  Comments Feed" href="feed/index.html" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s2.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4.1"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJytU9tuwyAM/aERmvX+MO1bIHEzN1wiDIvy9yOQVG0qdZXaN3w5x/bB5n3HKms8GM91YJ0KDRrifVdZzUijgmFhFRXRB7+CSWWbC1AL14JH0zApHI+pt5478FVNhS0QP4PvRNWyZN2lz7lNiKYE18SIA34oymLFZUBVj+0kuHTCDZz8oOB1Gv8D+hmahLoaQgw2eNY4rJ/uZEHhxKgd/QM/BaUYoQcGNSaxc4SXq/KwX++OG26gp8Q4FaiR5r+z5Cm72S9C//YqlXA2EKg31egcaAz6An0sTWWnVsricx2/N3c0OdnLsmbxVCTN02X+pffR3o+rF/26E37M0LGUABX3zfhHsHyUUkY1iNisSVrU+7u5KadH6nxg6UJvPBmK3FiPEU2Xx2vbP4VOzuapvvVXuT0cN5vdfns8/wGBzK3I?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='../../s1.wp.com/wp-content/themes/pub/varia/print9298.css?m=1571655471h&amp;cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/_static/??-eJx9jcsOAiEMRX9ILLPwsTF+C4MVq4WSoQzx78W4GePETdObnnMLLRsvSTEp6A0jFsh1hKLS+ngybn0pG1inZjeRA0r+g5qWvcQfIVaTuQZKBRpdAmoBrP0qD0LDroFizOy0l65/XBQEFMPinZKkr2Cu7Gj6p044soS+BujUIr6lczwNu+Nh2NvB2vsL649nMA==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='stow-fonts-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C300italic%2C400%2C400italic%2C600%7CDroid+Serif%3A400%2C400italic%7COswald%3A300%2C400&amp;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='../../s2.wp.com/_static/indexab0c.html??/wp-content/themes/pub/stow/style.css,/wp-content/mu-plugins/actionbar/actionbar.css?m=1587160100j&amp;cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link rel='stylesheet' id='all-css-6-1' href='https://s0.wp.com/_static/??-eJxti0EKgCAQAD+ULWGJHaK3mJgaqyut0fejQ4eo0zAwA2cRlnJ1uUI6RMHDx8xQiKtY0cQdOJg9Zv+wtcwN/F9MNhoUSJ7e8plqcMkxhB480mLwDuY0dYMepVJaqu0CZXY33g==?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZdVrKOPT4FubmZ6UWJJql5uZh5McXJ+XklqXglIbW5+UmZOqm5pcWpRYjpQDGhQWj5QnX2uraGpqYWxqZmZqXEWALkfL7E='></script>
+<link rel='stylesheet' id='all-css-0-2' href='../../s0.wp.com/wp-content/mu-plugins/highlander-comments/style6f5b.css?m=1530132353h&amp;cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://wp.me/PbX5nL-1J' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fprimjeri%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fprimjeri%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content=" " />
+<meta property="og:url" content="https://rsacryptosystem.wordpress.com/primjeri/" />
+<meta property="og:description" content="U nastavku se nalaze objašnjeni primjeri uz pomoć kojih ćete lakše razumjeti matematički segment RSA kriptosistema. Prvo što treba da uradimo jeste da generišemo privatne i javne ključeve. To se ra…" />
+<meta property="article:published_time" content="2020-04-30T19:51:41+00:00" />
+<meta property="article:modified_time" content="2020-05-19T21:42:06+00:00" />
+<meta property="og:site_name" content="RSA kriptosistem" />
+<meta property="og:image" content="https://rsacryptosystem.files.wordpress.com/2020/05/tenor.gif" />
+<meta property="og:image:width" content="498" />
+<meta property="og:image:height" content="498" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="RSA kriptosistem" />
+<meta name="twitter:image" content="https://rsacryptosystem.files.wordpress.com/2020/05/tenor.gif?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="../osd.xml" title="RSA kriptosistem" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="RSA kriptosistem" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://rsacryptosystem.wordpress.com/feed/;icon-uri=https://rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4.png?w=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="U nastavku se nalaze objašnjeni primjeri uz pomoć kojih ćete lakše razumjeti matematički segment RSA kriptosistema. Prvo što treba da uradimo jeste da generišemo privatne i javne ključeve. To se radi na sljedeći način: GENERISANJE KLJUČEVA Prvo ćemo odabrati dva prosta broja koja su slične dužine: p = 23 i q = 31. U normalnim&hellip;" />
+<link rel="icon" href="../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-476ca.png?w=32" sizes="32x32" />
+<link rel="icon" href="../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-49939.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4ad83.png?w=180" />
+<meta name="msapplication-TileImage" content="https://rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4.png?w=270" />
+</head>
+
+<body class="page-template-default page page-id-107 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title admin-bar highlander-enabled highlander-light">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header">
+
+			<div class="site-branding">
+
+								<p class="site-title"><a href="../index.html" rel="home">RSA kriptosistem</a></p>
+			
+	</div><!-- .site-branding -->
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-19"><a href="../index.html">POČETNA</a></li>
+<li id="menu-item-605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-605"><a href="../rsa/index.html">O RSA</a></li>
+<li id="menu-item-607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-607"><a href="../napadi-na-rsa/index.html">NAPADI NA RSA</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-107 current_page_item menu-item-110"><a href="index.html" aria-current="page">IMPLEMENTACIJA</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../blog-2/index.html">OBJAVE</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-107" class="post-107 page type-page status-publish hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+
+	</header>
+
+	<div class="entry-content">
+		
+<div class="wp-block-cover alignfull has-parallax is-style-top-wave" style="background-image:url('../../rsacryptosystem.files.wordpress.com/2020/05/grid_structure_3d_142599_1280x1024.jpg');min-height:695px;"><div class="wp-block-cover__inner-container">
+<p class="has-drop-cap has-text-align-left has-background-color has-text-color" style="line-height:1.4;font-size:25px;">U nastavku se nalaze objašnjeni primjeri uz pomoć kojih ćete lakše razumjeti matematički segment RSA kriptosistema.</p>
+</div></div>
+
+
+
+<div style="height:63px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p><em>Prvo što treba da uradimo jeste da generišemo privatne i javne ključeve. To se radi na sljedeći način:</em></p>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#4e4949;"><strong>GENERISANJE KLJUČEVA</strong></p>
+
+
+
+<ol type="1"><li>Prvo ćemo odabrati dva prosta broja koja su slične dužine: <strong>p = 23 </strong>i <strong>q = 31</strong>. U normalnim okolnostima ovi brojevi bi trebalo da budu mnogo veći, ali smo ih uzeli kao primjer radi lakšeg razumijevanja.</li><li>Potom izračunamo n = p·q = 23·31 = 713 → <strong>n = 713</strong></li><li>i Ojlerovu funkciju ϕ(n) = (p−1)·(q−1) = 22·30= 660 → <strong>ϕ(n) = 660</strong></li><li>Zatim odaberemo e koji treba da bude manji od ϕ(n), ali i relativno prost sa ϕ(n) tj. da nemaju zajedničkih djelilaca. Izabraćemo <strong>e = 7</strong>.</li><li>Pomoću proširenog Euklidovog algoritma izračunaćemo d tako da je d·e ≡ 1 (mod ϕ(n)), tj.     d·7 (mod 660) = 1. Slijedi da je <strong>d = 283</strong> &nbsp;jer je 283·7 = 1981, a kada 1981 podijelimo sa 660 dobijemo ostatak 1.</li></ol>
+
+
+
+<p>Bobov javni ključ je <strong>(n = 713, e = 7)</strong>, dok je tajni ključ <strong>d = 283</strong>.</p>
+
+
+
+<div style="height:62px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator" />
+
+
+
+<p><em>Potom Bob stavlja svoj javni ključ u javnu datoteku, kako će Alice šifrovati poruku?</em></p>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#656464;"><strong>ŠIFROVANJE</strong></p>
+
+
+
+<p>Bobov javni ključ se sada nalazi u nekoj javnoj datoteci. A Alice želi da mu pošalje poruku, tj. da šifruje otvoreni tekst <strong>x = 123</strong>. Da bi to uradila potrebno je da pristupi Bobovom javnom ključu <strong>(713,  7)</strong> i da izračuna šifrat:</p>
+
+
+
+<p class="has-text-align-center"><strong>e<sub>K</sub>(x) = x<sup>e&nbsp; </sup>(mod n) =&gt; <strong>e<sub>K</sub>(x) =</strong></strong> <strong>123<sup>7 </sup>(mod 713)</strong>,</p>
+
+
+
+<p>odatle dobija da je šifrat <strong>e<sub>K</sub>(x) = 495</strong>, te ga šalje Bobu.</p>
+
+
+
+<div style="height:66px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator" />
+
+
+
+<p><em>Šifrat je poslan, ali kako će ga Bob dešifrovati?</em></p>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#7f7171;"><strong>DEŠIFROVANJE</strong></p>
+
+
+
+<p>Bob dobija poruku od Alice i sada je samo potrebno da iskoristi svoj tajni ključ <strong>d = 283</strong> za dešifrovanje. On računa:</p>
+
+
+
+<p class="has-text-align-center"><strong>x = (e<sub>K</sub>(x))<sup>d</sup> (mod n)</strong> <strong>=&gt; x = 495<sup>283</sup> (mod 713)</strong>,</p>
+
+
+
+<p>te dobija da je <strong>x = 123</strong>.</p>
+
+
+
+<p>Po<em>ruka je dešifrovana, a Bob dobija sadržaj Aliceinog otvorenog teksta.</em></p>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-large is-resized"><img data-attachment-id="660" data-permalink="https://rsacryptosystem.wordpress.com/tenor/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/tenor.gif" data-orig-size="498,498" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="tenor" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/tenor.gif?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/tenor.gif?w=498" src="../../rsacryptosystem.files.wordpress.com/2020/05/tenor7d1e.gif?w=498" alt="" class="wp-image-660" width="159" height="159" /></figure></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p><em>Šta ako Alice želi da šifruje tekst? </em></p>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#10777f;"><strong>ŠIFROVANJE TEKSTUALNE PORUKE</strong></p>
+
+
+
+<p>Recimo da Alice želi da pošalje Bobu poruku INFORMATIKA. Potrebno je da opet pristupi njegovom javnom ključu koji je <strong>(n, e) = (713, 7)</strong>. Zatim treba da slovima koji čine poruku redom pridruži brojevne vrijednosti. To će uraditi koristeći se pravilom da slovima od A do Z redom odgovaraju brojevi od 01 do 26, dok se razmak označava sa 00 npr. A će biti 01, B će biti 02, C će biti 03, itd.</p>
+
+
+
+<p>Na taj način dobija numerički ekvivalent ove poruke koji je <strong>x = 0914061518130120091101</strong>. Pošto je x&gt;n ona mora da x podijeli u blokove od po dvije cifre. Slijedi da je x = (09, 14, 06, 15, 18, 13, 01, 20, 09, 11, 01). Zatim koristi Bobov javni ključ (713, 7) i računa y<sub>i</sub> = x<sub>i</sub><sup>e</sup> &nbsp;(mod n) za sve i = 1, &#8230;,11. To izgleda ovako:</p>
+
+
+
+<ul><li>y<sub>1</sub> = 09<sup>7</sup> mod 713 = 165                          </li><li>y<sub>2</sub> = 14<sup>7</sup> mod 713 = 19                           </li><li>y<sub>3</sub> = 06<sup>7</sup> mod 713 = 440                          </li><li>y<sub>4</sub> = 15<sup>7</sup> mod 713 = 333                        </li><li>y<sub>5</sub> = 18<sup>7</sup> mod 713 = 443                          </li><li>y<sub>6</sub> = 13<sup>7</sup> mod 713 = 239</li><li>y<sub>7</sub> = 01<sup>7</sup> mod 713 = 1</li><li>y<sub>8</sub> = 20<sup>7</sup> mod 713 = 297</li><li>y<sub>9</sub> = 09<sup>7</sup> mod 713 = 165</li><li>y<sub>10</sub> = 11<sup>7</sup> mod 713 = 168</li><li>y<sub>11</sub> = 01<sup>7</sup> mod 713 = 1</li></ul>
+
+
+
+<p>Alice formira šifrat tako što svaki y prikaže kroz 3 cifre <strong>x = 165019440333443239001297165168001</strong>, pa potom šalje x Bobu. </p>
+
+
+
+<div style="height:78px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator" />
+
+
+
+<p><em>Na koji način će Bob dešifrovati ovu poruku?</em></p>
+
+
+
+<p class="has-text-align-center has-background-color has-text-color has-background" style="background-color:#448183;"><strong>DEŠIFROVANJE TEKSTUALNE PORUKE</strong></p>
+
+
+
+<p>Da bi dešifrovao ovu poruku Bob treba da podijeli x u blokove od po 3 cifre, te da pomoću svoj tajnog ključa <strong>d=283</strong> izračuna x<sub>i</sub> = y<sub>i</sub><sup>d</sup> (mod n) za sve&nbsp;i=1, &#8230;, 11. Slijedi:</p>
+
+
+
+<ul><li>x<sub>1</sub> = 165<sup>283</sup> mod 713 = 09&nbsp;&nbsp; =&gt; I                      </li><li>x<sub>2</sub> = 19<sup>283</sup> mod 713 = 14 &nbsp; =&gt; N                       </li><li>x<sub>3</sub> = 440<sup>283</sup> mod 713 = 06&nbsp;&nbsp; =&gt; F                     </li><li>x<sub>4</sub> = 333<sup>283</sup> mod 713 = 15&nbsp;&nbsp; =&gt; O                   </li><li>x<sub>5</sub> = 443<sup>283</sup> mod 713 = 18&nbsp;&nbsp; =&gt; R                    </li><li>x<sub>6</sub> = 239<sup>283</sup> mod 713 = 13 =&gt; M</li><li>x<sub>7</sub> = 1<sup>283</sup> mod 713 = 1 =&gt; A</li><li>x<sub>8</sub> = 297<sup>283</sup> mod 713 = 20 =&gt; T</li><li>x<sub>9</sub> = 165<sup>283</sup> mod 713 = 9 =&gt; I</li><li>x<sub>10</sub> = 168<sup>283</sup> mod 713 = 11 =&gt; K</li><li>x<sub>11</sub> = 1<sup>283</sup> mod 713 = 1 =&gt; A</li></ul>
+
+
+
+<p>i dobija otvoreni tekst INFORMATIKA.</p>
+
+
+
+<p>Po<em>ruka je dešifrovana, a Bob dobija sadržaj Aliceinog otvorenog teksta.</em></p>
+
+
+
+<div style="height:87px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p>Ako želite da saznate na koji način se razbija šifra pogledajte neke od sljedećih objava:</p>
+
+
+<ul class="wp-block-latest-posts wp-block-latest-posts__list"><li><a href="../2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/index.html">Kako spriječiti uspješnu faktorizaciju broja&nbsp;n?</a></li>
+<li><a href="../2020/05/05/ciklicni-napadi/index.html">Ciklični napadi na RSA, opasnost ili&nbsp;ne?</a></li>
+<li><a href="../2020/05/05/napad-s-malim-javnim-eksponentom/index.html">Napad na RSA s malim javnim eksponentom. Kako se&nbsp;zaštititi?</a></li>
+<li><a href="../2020/05/05/napad-s-malim-tajnim-eksponentom/index.html">Kako izgleda napad na RSA s malim tajnim&nbsp;eksponentom?</a></li>
+</ul>
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-primary-color has-text-color" style="line-height:0;"><strong>Kategorije:</strong></p>
+
+
+<ul class="wp-block-categories wp-block-categories-list">	<li class="cat-item cat-item-577858796"><a href="../category/kriptoanaliza/index.html">Kriptoanaliza</a>
+</li>
+	<li class="cat-item cat-item-5951037"><a href="../category/osnovne-informacije/index.html">Osnovne informacije</a>
+</li>
+</ul>
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-text-align-left has-foreground-dark-color has-text-color" style="line-height:1.2;">Kliknite ako želite da Vam u inbox stižu obavještenja o novim objavama:</p>
+
+
+
+<div class="wp-block-jetpack-subscriptions"><div class="jetpack_subscription_widget">			<form
+				action="https://subscribe.wordpress.com/"
+				method="post"
+				accept-charset="utf-8"
+				id=""
+			>
+														<p>
+						<input
+							type="text"
+							name="email"
+							style="width: 95%; padding: 1px 10px"
+							placeholder="Enter your email address"
+							value=""
+							id=""
+						/>
+					</p>
+				
+                <p>
+                    <input type="hidden" name="action" value="subscribe"/>
+                    <input type="hidden" name="blog_id" value="176621741"/>
+                    <input type="hidden" name="source" value="index.html"/>
+                    <input type="hidden" name="sub-type" value="widget"/>
+                    <input type="hidden" name="redirect_fragment" value="530"/>
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="26fc85efb7" />                    <button type="submit"
+	                    	                        class="undefined"
+	                    		                			                style="background-color: undefined; color: undefined;"
+		                	                >
+	                    Pretplati se                    </button>
+                </p>
+            </form>
+			
+</div></div>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-107" class="share-twitter sd-button share-icon" href="index9a7b.html?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-107" class="share-facebook sd-button share-icon" href="index5a58.html?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-176621741-107-5ec4f5f138855' data-src='//widgets.wp.com/likes/index.html?ver=20190321#blog_id=176621741&amp;post_id=107&amp;origin=rsacryptosystem.wordpress.com&amp;obj_id=176621741-107-5ec4f5f138855' data-name='like-post-frame-176621741-107-5ec4f5f138855'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>	</div><!-- .entry-content -->
+
+	</article><!-- #post-107 -->
+
+<div id="comments" class="comments-area responsive-max-width">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rsacryptosystem.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="9016019443" /><input type="hidden" name="_wp_http_referer" value="/primjeri/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Enter your comment here...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Enter your comment here..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" class="nascar-signin-link"
+                   title="Login via Guest">
+									</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link"
+                   title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg>				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=https%3A%2F%2Frsacryptosystem.wordpress.com&amp;color_scheme=light" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link"
+                   title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg>				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link"
+                   title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value="" /></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="WordPress.com Logo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			You are commenting using your WordPress.com account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Google photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			You are commenting using your Google account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60" ><path fill="#519bf7" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z" /><path fill="#3db366" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z" /><path fill="#fdc600" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z" /><path fill="#f15b44" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z" /></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Twitter picture" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			You are commenting using your Twitter account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			You are commenting using your Facebook account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog"  style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='107' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3767a46235" /></p>
+<input type="hidden" name="genseq" value="1589966321" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="85"/></p></form>	</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="../index.html" rel="home">RSA kriptosistem</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_custom_svg" title="Create a website or blog at WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Create a website or blog at WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor” fill-rule="evenodd"></path>
+			</svg></a>					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<div id="wpadminbar" class="marketing-bar"><div class="marketing-bar-text">Create your website at WordPress.com</div><a class="marketing-bar-button" href="https://wordpress.com/?ref=marketing_bar">Get started</a></div><script src='../../0.gravatar.com/js/gprofiles1baf.js?ver=202021y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='../../s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgrohoc3b6.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script>
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/rsacryptosystem.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/rsacryptosystem.wordpress.com\/wp-login.php?action=logout&_wpnonce=c58647ecda","homeURL":"https:\/\/rsacryptosystem.wordpress.com\/","postID":"107","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script>
+<script type='text/javascript' src='../../s0.wp.com/_static/indexa85c.html??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="176621741" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://rsacryptosystem.wordpress.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="RSA kriptosistem" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="2272ac2f80" /><input type="hidden" name="_wp_http_referer" value="/primjeri/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/rsacryptosystem.wordpress.com\/primjeri\/":107};
+	</script>
+				<div class="widget widget_eu_cookie_law_widget"><div
+	class="hide-on-button ads-active"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+>
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept" />
+
+		Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br />
+To find out more, including how to control cookies, see here:
+		<a href="https://automattic.com/cookies" >
+			Cookie Policy		</a>
+ </form>
+</div>
+</div><link rel='stylesheet' id='all-css-0-3' href='../../s0.wp.com/wp-content/mu-plugins/carousel/jetpack-carouseleced.css?m=1563361695h&amp;cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyFUEFSwzAM/BCOCKSQHpi+JdhqKkeR3chOCK+vC+mhwAwnabSr3ZVgicYGSSgJvILDmSzGj8rrA9xDMWgaUbXr8Q/UnzNO61Yqkplw+ZfmMcXODmZCpc9fqmM2kXNPosA0oEJZynjqxDFONzKJ5ewKeA1PmmBGcWG6QjHweiTmaiT5qX0TPmZmo5TQoKNE0m+WUD/W7evzy74BwUW/Ur5zsMPmUvpCLR/R77HZ7j2Mb/Wu3T+1TVM3/gLyqYDg'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="../../s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min9853.js?m=1573572739h&amp;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="../../s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.minf99f.js?m=1540208548h&amp;ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="../../s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min9c36.js?m=1585663916h&amp;ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="../../s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-url.min67f7.js?m=1585663916h&amp;ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="../../s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min52a8.js?m=1550600082h&amp;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="../../s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min5eac.js?m=1540208548h&amp;ver=2.0.2"></scr' + 'ipt>' );
+( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="../../s2.wp.com/wp-content/plugins/gutenberg-core/8.1.0/vendor/wp-polyfill-url.min.7490158baa64.js?m=1589446759h&amp;ver=3.6.4"></scr' + 'ipt>' );
+( window.DOMRect ) || document.write( '<script src="../../s1.wp.com/wp-content/plugins/gutenberg-core/8.1.0/vendor/wp-polyfill-dom-rect.7e21c10395bc.js?m=1589446759h&amp;ver=3.42.0"></scr' + 'ipt>' );
+</script>
+<script src='../../s2.wp.com/wp-includes/js/dist/vendor/lodash.min0e28.js?m=1573572739h&amp;ver=4.17.15'></script>
+<script>
+window.lodash = _.noConflict();
+</script>
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"176621741","siteName":"RSA kriptosistem","siteURL":"http:\/\/rsacryptosystem.wordpress.com","icon":"<img alt='' src='https:\/\/rsacryptosystem.files.wordpress.com\/2020\/05\/cropped-encrypt-3-599204-4.png?w=50' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/stow","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fprimjeri%2F&signup_flow=account","themeURL":"https:\/\/wordpress.com\/theme\/stow\/","xhrURL":"https:\/\/rsacryptosystem.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"6f800f4f98","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"26fc85efb7\" \/>","referer":"https:\/\/rsacryptosystem.wordpress.com\/primjeri\/","canFollow":"1","feedID":null,"statusMessage":"","customizeLink":"https:\/\/rsacryptosystem.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fprimjeri%2F","postID":"107","shortlink":"https:\/\/wp.me\/PbX5nL-1J","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/rsacryptosystem.wordpress.com\/107","statsLink":"https:\/\/wordpress.com\/stats\/post\/107\/rsacryptosystem.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Stow","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fprimjeri%2F&signup_flow=account\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/rsacryptosystem.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"3b20b4a925","display_exif":"1","display_comments":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/rsacryptosystem.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fprimjeri%2F","blog_id":"176621741","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=176621741&v=wpcom&tz=2&user_id=0&subd=rsacryptosystem","is_public":"1","reblog_enabled":""};
+</script>
+<script>
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVUu1uwjAMfKGlJhrbwo9pjzKljenc5mtxQsfbLwzKAKFK/Ipz9t1ZtmGKogs+o88QbenJM/SlfltMfc0kBNXIZgVtIWuApPJA3uBPM/ATPEY2wYmE2uyXFbbFWsGUUaChTL4XxwzIlVRvz6+bNXicOOpuFK0N3chgiDN0OoXCaI+g2BFOtxauiNmlC85VSFgakWFgsNQCTxTxEdIVMBPJd7aY64KE0e4bR35BfSLTY2bAUrNhJBRWT5DRRasz3uALOtpUH9HqBE5zxlQjEXaYEh2aOmMPKuRUB85LpC5T8AfSObo3EY7/Q7jEh++CaX96msuqe4s47RoGzH+HMANL/Y3EDrN4rgf5WZ1hG5JbqI+Bs9haTQn4S6d6iPNbSR/uXb6ojVJrJeXwC6euNfE='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='../wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20190321#ver=20190321' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="../../stats.wp.com/w7f39.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'176621741','blog_tz':'2','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'176621741','v':'wpcom','tz':'2','user_id':'0','post':'107','subd':'rsacryptosystem'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJodEk4NDNTNVZYN0t0JUdFWHpbbGgxcT9mTjNaLyV+dWF4NXZjZHpXOVZ4YzZyW0ZGVUVEenM1OE0vNF1tTWc/Tl1PcGNoaFBqM041XzdvcnEwR0wmcXZbTD1mL1k/SVU2dzlOb3NWWzNxTnUrY3ptY1drNUJsNHctc1JmalpzL1lUdExlUHZNbSxzejNpbEhaM3xCWmp6eVV1dVU1M0czQiZ6NmQwNjRKTmhPNU5ORWhEW3ZbSHk9bCwvfndINGV6UW90TUY='}]);
+_stq.push([ 'clickTrackerInit', '176621741', '107' ]);
+	</script>
+<noscript><img src="../../pixel.wp.com/b0b80.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+
+<!-- Mirrored from rsacryptosystem.wordpress.com/primjeri/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2020 09:18:57 GMT -->
+</html>

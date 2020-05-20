@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from rsacryptosystem.wordpress.com/blog-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2020 09:19:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>RSA kriptosistem</title>
+<link rel='dns-prefetch' href='http://s2.wp.com/' />
+<link rel='dns-prefetch' href='http://s1.wp.com/' />
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel='dns-prefetch' href='http://wordpress.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel="alternate" type="application/rss+xml" title="RSA kriptosistem &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="RSA kriptosistem &raquo; Comments Feed" href="../comments/feed/index.html" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s2.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4.1"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJytU9tuwyAM/aERmvX+MO1bIHEzN1wiDIvy9yOQVG0qdZXaN3w5x/bB5n3HKms8GM91YJ0KDRrifVdZzUijgmFhFRXRB7+CSWWbC1AL14JH0zApHI+pt5478FVNhS0QP4PvRNWyZN2lz7lNiKYE18SIA34oymLFZUBVj+0kuHTCDZz8oOB1Gv8D+hmahLoaQgw2eNY4rJ/uZEHhxKgd/QM/BaUYoQcGNSaxc4SXq/KwX++OG26gp8Q4FaiR5r+z5Cm72S9C//YqlXA2EKg31egcaAz6An0sTWWnVsricx2/N3c0OdnLsmbxVCTN02X+pffR3o+rF/26E37M0LGUABX3zfhHsHyUUkY1iNisSVrU+7u5KadH6nxg6UJvPBmK3FiPEU2Xx2vbP4VOzuapvvVXuT0cN5vdfns8/wGBzK3I?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='../../s1.wp.com/wp-content/themes/pub/varia/print9298.css?m=1571655471h&amp;cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/_static/??-eJx9jcsOAiEMRX9ILLPwsTF+C4MVq4WSoQzx78W4GePETdObnnMLLRsvSTEp6A0jFsh1hKLS+ngybn0pG1inZjeRA0r+g5qWvcQfIVaTuQZKBRpdAmoBrP0qD0LDroFizOy0l65/XBQEFMPinZKkr2Cu7Gj6p044soS+BujUIr6lczwNu+Nh2NvB2vsL649nMA==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='stow-fonts-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C300italic%2C400%2C400italic%2C600%7CDroid+Serif%3A400%2C400italic%7COswald%3A300%2C400&amp;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='../../s2.wp.com/_static/indexab0c.html??/wp-content/themes/pub/stow/style.css,/wp-content/mu-plugins/actionbar/actionbar.css?m=1587160100j&amp;cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link rel='stylesheet' id='all-css-6-1' href='https://s0.wp.com/_static/??-eJxti0EKgCAQAD+ULWGJHaK3mJgaqyut0fejQ4eo0zAwA2cRlnJ1uUI6RMHDx8xQiKtY0cQdOJg9Zv+wtcwN/F9MNhoUSJ7e8plqcMkxhB480mLwDuY0dYMepVJaqu0CZXY33g==?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZdVrKOPT4FubmZ6UWJJql5uZh5McXJ+XklqXglIbW5+UmZOqm5pcWpRYjpQDGhQWj5QnX2uraGpqYWxqZmZqXEWALkfL7E='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://wp.me/PbX5nL-6' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fblog-2%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fblog-2%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content=" " />
+<meta property="og:url" content="https://rsacryptosystem.wordpress.com/blog-2/" />
+<meta property="og:description" content="Na ovoj stranici možete pratiti nove, a i pronaći sve dosadašnje objave. Kategorije objava: Kliknite ako želite da Vam u inbox stižu obavještenja o novim objavama:" />
+<meta property="article:published_time" content="2020-04-29T11:13:37+00:00" />
+<meta property="article:modified_time" content="2020-05-19T21:44:53+00:00" />
+<meta property="og:site_name" content="RSA kriptosistem" />
+<meta property="og:image" content="https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png" />
+<meta property="og:image:width" content="1400" />
+<meta property="og:image:height" content="700" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="RSA kriptosistem" />
+<meta name="twitter:image" content="https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="../osd.xml" title="RSA kriptosistem" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="RSA kriptosistem" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://rsacryptosystem.wordpress.com/feed/;icon-uri=https://rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4.png?w=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="Na ovoj stranici možete pratiti nove, a i pronaći sve dosadašnje objave. Kategorije objava: Kliknite ako želite da Vam u inbox stižu obavještenja o novim objavama:" />
+<link rel="icon" href="../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-476ca.png?w=32" sizes="32x32" />
+<link rel="icon" href="../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-49939.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4ad83.png?w=180" />
+<meta name="msapplication-TileImage" content="https://rsacryptosystem.files.wordpress.com/2020/05/cropped-encrypt-3-599204-4.png?w=270" />
+</head>
+
+<body class="page-template-default page page-id-6 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title admin-bar highlander-enabled highlander-light">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header">
+
+			<div class="site-branding">
+
+								<p class="site-title"><a href="../index.html" rel="home">RSA kriptosistem</a></p>
+			
+	</div><!-- .site-branding -->
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-19"><a href="../index.html">POČETNA</a></li>
+<li id="menu-item-605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-605"><a href="../rsa/index.html">O RSA</a></li>
+<li id="menu-item-607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-607"><a href="../napadi-na-rsa/index.html">NAPADI NA RSA</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../primjeri/index.html">IMPLEMENTACIJA</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6 current_page_item menu-item-72"><a href="index.html" aria-current="page">OBJAVE</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-6" class="post-6 page type-page status-publish hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+
+	</header>
+
+	<div class="entry-content">
+		
+<div class="wp-block-cover alignfull has-parallax is-style-top-wave" style="background-image:url('../../rsacryptosystem.files.wordpress.com/2020/05/cubes_red_black_131950_1280x1024-2.jpg');min-height:687px;"><div class="wp-block-cover__inner-container">
+<p class="has-drop-cap has-text-align-left" style="font-size:29.5px;">Na ovoj stranici možete pratiti nove, a i pronaći sve dosadašnje objave.</p>
+</div></div>
+
+
+
+<div style="height:65px;" aria-hidden="true" class="wp-block-spacer desktop-only"></div>
+
+
+				<div
+			class="wp-block-newspack-blocks-homepage-articles alignwide is-style-borders wpnbha show-image image-aligntop ts-4 is-3 is-style-borders has-text-color has-foreground-color has-more-button"
+			style=""
+			>
+			<div data-posts>
+									<article data-post-id="692"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="../2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/index.html" rel="bookmark">Kako spriječiti uspješnu faktorizaciju broja&nbsp;n?</a></h2>						<p>Postoje mnogi algoritmi za faktorizaciju kao što su Polardov p-1 algoritam, Polardov rho algoritam, GNFS, QS, Fermaov metod itd., ali oni još uvijek ne predstavljaju opasnost po RSA kriptosistem ako se poštuju određena pravila. Čak i najbržem algoritmu za faktorizaciju (GNFS) treba dosta vremena da faktorizuje velike brojeve. Na primjer, potrebno je nekoliko mjeseci da<a class="more-link" href="../2020/05/19/faktorizacija-broja-n-opasnost-ili-ne/index.html">Continue reading <span class="screen-reader-text">&#8220;Kako spriječiti uspješnu faktorizaciju broja&nbsp;n?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<a href="../author/xnyctosaurus/index.html"><img alt='' src='https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /></a>						<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="../author/xnyctosaurus/index.html">Teodora Milanović</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published" datetime="2020-05-19T18:49:18+02:00">May 19, 2020</time><time class="updated" datetime="2020-05-19T22:51:44+02:00">May 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="275"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="../2020/05/05/ciklicni-napadi/index.html" rel="bookmark">Ciklični napadi na RSA, opasnost ili&nbsp;ne?</a></h2>						<p>Ciklični napad je napad kod kog se otvoreni tekst uvijek dobija ponovljenim šifrovanjem njegovog šifrata, sve dok se ciklus ne vrati na izvorni šifrovani tekst. Neka je ek(x) = xe (mod n) šifrat. Potrebno je da napadač računa&nbsp;ek(x)e(mod n), ek(x)e•2(mod n), ek(x)e•3(mod n), itd. Drugim riječima, potrebno je da napadač pomoću javnog ključa iznova šifruje<a class="more-link" href="../2020/05/05/ciklicni-napadi/index.html">Continue reading <span class="screen-reader-text">&#8220;Ciklični napadi na RSA, opasnost ili&nbsp;ne?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<a href="../author/xnyctosaurus/index.html"><img alt='' src='https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /></a>						<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="../author/xnyctosaurus/index.html">Teodora Milanović</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published" datetime="2020-05-05T15:49:09+02:00">May 5, 2020</time><time class="updated" datetime="2020-05-19T19:46:35+02:00">May 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="262"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="../2020/05/05/napad-s-malim-javnim-eksponentom/index.html" rel="bookmark">Napad na RSA s malim javnim eksponentom. Kako se&nbsp;zaštititi?</a></h2>						<p>Hastadov napad Do ovog napada dolazi kada se ista poruka m šifruje s nekoliko različitih javnih ključeva (n,e), a da pritom ključevi imaju isti javni eksponent e i različite module n koji su relativno prosti. Pretpostavimo da postoje tri korisnika koji koriste isti javni eksponent e = 3, ali različite &nbsp;module n da šifruju poruku<a class="more-link" href="../2020/05/05/napad-s-malim-javnim-eksponentom/index.html">Continue reading <span class="screen-reader-text">&#8220;Napad na RSA s malim javnim eksponentom. Kako se&nbsp;zaštititi?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<a href="../author/xnyctosaurus/index.html"><img alt='' src='https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /></a>						<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="../author/xnyctosaurus/index.html">Teodora Milanović</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published" datetime="2020-05-05T15:28:47+02:00">May 5, 2020</time><time class="updated" datetime="2020-05-19T19:57:53+02:00">May 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="246"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="../2020/05/05/napad-s-malim-tajnim-eksponentom/index.html" rel="bookmark">Kako izgleda napad na RSA s malim tajnim&nbsp;eksponentom?</a></h2>						<p>Wienerova teorema glasi: Neka je n = pq i p &lt; q &lt; 2p te neka je e &lt; ϕ(n) i d &lt; 1/3 n0.25. Tada postoji polinomijalni algoritam koji iz poznavanja javnog ključa (n,e) računa d. Pošto je 𝑘/𝑑 prema Legendreovom teoremu neka konvergenta razvoja u verižni razlomak od 𝑒/𝑛, potrebno je da izračunamo<a class="more-link" href="../2020/05/05/napad-s-malim-tajnim-eksponentom/index.html">Continue reading <span class="screen-reader-text">&#8220;Kako izgleda napad na RSA s malim tajnim&nbsp;eksponentom?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<a href="../author/xnyctosaurus/index.html"><img alt='' src='https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /></a>						<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="../author/xnyctosaurus/index.html">Teodora Milanović</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published" datetime="2020-05-05T14:16:52+02:00">May 5, 2020</time><time class="updated" datetime="2020-05-19T20:03:05+02:00">May 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="9"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="../2020/04/29/example-post-3/index.html" rel="bookmark">Šta je RSA&nbsp;kriptosistem?</a></h2>						<p>Ako želimo da što bolje razumijemo RSA, potrebno je da se prvo upoznamo sa osnovnim pojmovima u kriptografiji. Zadatak kriptografije jeste da omogući komunikaciju između dvije osobe, tako da osoba kojoj poruke nisu namijenjene ne može da ih razumije. Pošiljaoca ćemo nazvati Alice, primaoca Bob, a napadača Eve. Poruka koju Alice šalje Bobu i koja<a class="more-link" href="../2020/04/29/example-post-3/index.html">Continue reading <span class="screen-reader-text">&#8220;Šta je RSA&nbsp;kriptosistem?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<a href="../author/xnyctosaurus/index.html"><img alt='' src='https://2.gravatar.com/avatar/56a08d04f863905d7e53f1dabab0b8ab?s=48&amp;d=identicon&amp;r=G' class='avatar avatar-48' height='48' width='48' /></a>						<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="../author/xnyctosaurus/index.html">Teodora Milanović</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published" datetime="2020-04-29T11:13:34+02:00">April 29, 2020</time><time class="updated" datetime="2020-05-19T15:25:04+02:00">May 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+					</div>
+							<button type="button" data-next="https://public-api.wordpress.com/wpcom/v2/sites/176621741/articles?className=is-style-borders&amp;moreButton=1&amp;moreButtonText=U%c4%8cITAJ%20VI%c5%a0E%20OBJAVA&amp;postsToShow=5&amp;textColor=foreground&amp;align=wide&amp;showExcerpt=1&amp;showDate=1&amp;showImage=1&amp;showCaption=0&amp;imageShape=landscape&amp;minHeight=0&amp;showAuthor=1&amp;showAvatar=1&amp;showCategory=0&amp;postLayout=list&amp;columns=3&amp;mediaPosition=top&amp;&amp;&amp;&amp;&amp;&amp;typeScale=4&amp;imageScale=3&amp;mobileStack=0&amp;sectionHeader&amp;specificMode=0&amp;customTextColor&amp;singleMode=0&amp;showSubtitle=0&amp;page=2">
+				UČITAJ VIŠE OBJAVA				</button>
+				<p class="loading">
+					Loading&#8230;				</p>
+				<p class="error">
+					Something went wrong. Please refresh the page and/or try again.				</p>
+
+			
+		</div>
+				
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<figure class="wp-block-image size-large is-resized is-style-default"><img data-attachment-id="679" data-permalink="https://rsacryptosystem.wordpress.com/how-ssl-encryption-works-1/" data-orig-file="https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png" data-orig-size="1400,700" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="how-ssl-encryption-works-1" data-image-description="" data-medium-file="https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=300" data-large-file="https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=750" src="../../rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-12dff.png?w=1024" alt="" class="wp-image-679" width="399" height="200" srcset="https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=399 399w, https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=798 798w, https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=150 150w, https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=300 300w, https://rsacryptosystem.files.wordpress.com/2020/05/how-ssl-encryption-works-1.png?w=768 768w" sizes="(max-width: 399px) 100vw, 399px" /></figure>
+
+
+
+<hr class="wp-block-separator" />
+
+
+
+<p style="line-height:0;"><strong>Kategorije objava:</strong></p>
+
+
+<ul class="wp-block-categories wp-block-categories-list">	<li class="cat-item cat-item-577858796"><a href="../category/kriptoanaliza/index.html">Kriptoanaliza</a> (4)
+</li>
+	<li class="cat-item cat-item-5951037"><a href="../category/osnovne-informacije/index.html">Osnovne informacije</a> (3)
+</li>
+</ul>
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+<form class="wp-block-search" role="search" method="get" action="https://rsacryptosystem.wordpress.com/"><label for="wp-block-search__input-1" class="wp-block-search__label"><strong>Pretražite:</strong></label><input type="search" id="wp-block-search__input-1" class="wp-block-search__input" name="s" value="" placeholder="" required /><button type="submit" class="wp-block-search__button">Search</button></form>
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<p class="has-text-align-left" style="line-height:1.1;">Kliknite ako želite da Vam u inbox stižu obavještenja o novim objavama:</p>
+
+
+
+<div class="wp-block-jetpack-subscriptions"><div class="jetpack_subscription_widget">			<form
+				action="https://subscribe.wordpress.com/"
+				method="post"
+				accept-charset="utf-8"
+				id=""
+			>
+														<p>
+						<input
+							type="text"
+							name="email"
+							style="width: 95%; padding: 1px 10px"
+							placeholder="Enter your email address"
+							value=""
+							id=""
+						/>
+					</p>
+				
+                <p>
+                    <input type="hidden" name="action" value="subscribe"/>
+                    <input type="hidden" name="blog_id" value="176621741"/>
+                    <input type="hidden" name="source" value="index.html"/>
+                    <input type="hidden" name="sub-type" value="widget"/>
+                    <input type="hidden" name="redirect_fragment" value="483"/>
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="26fc85efb7" />                    <button type="submit"
+	                    	                        class="undefined"
+	                    		                			                style="background-color: undefined; color: undefined;"
+		                	                >
+	                    Pretplati se                    </button>
+                </p>
+            </form>
+			
+</div></div>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-176621741-6-5ec4f5f17253d' data-src='//widgets.wp.com/likes/index.html?ver=20190321#blog_id=176621741&amp;post_id=6&amp;origin=rsacryptosystem.wordpress.com&amp;obj_id=176621741-6-5ec4f5f17253d' data-name='like-post-frame-176621741-6-5ec4f5f17253d'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>	</div><!-- .entry-content -->
+
+	</article><!-- #post-6 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="../index.html" rel="home">RSA kriptosistem</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_custom_svg" title="Create a website or blog at WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Create a website or blog at WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor” fill-rule="evenodd"></path>
+			</svg></a>					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<div id="wpadminbar" class="marketing-bar"><div class="marketing-bar-text">Create your website at WordPress.com</div><a class="marketing-bar-button" href="https://wordpress.com/?ref=marketing_bar">Get started</a></div><script src='../../0.gravatar.com/js/gprofiles1baf.js?ver=202021y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='../../s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgrohoc3b6.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-56a08d04f863905d7e53f1dabab0b8ab">
+	</div>
+	</div>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="176621741" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="../index.html" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="RSA kriptosistem" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="2272ac2f80" /><input type="hidden" name="_wp_http_referer" value="/blog-2/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<div class="widget widget_eu_cookie_law_widget"><div
+	class="hide-on-button ads-active"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+>
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept" />
+
+		Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br />
+To find out more, including how to control cookies, see here:
+		<a href="https://automattic.com/cookies" >
+			Cookie Policy		</a>
+ </form>
+</div>
+</div><link rel='stylesheet' id='all-css-0-2' href='../../s0.wp.com/wp-content/mu-plugins/carousel/jetpack-carouseleced.css?m=1563361695h&amp;cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyFUEFSwzAM/BCOCKSQHpi+JdhqKkeR3chOCK+vC+mhwAwnabSr3ZVgicYGSSgJvILDmSzGj8rrA9xDMWgaUbXr8Q/UnzNO61Yqkplw+ZfmMcXODmZCpc9fqmM2kXNPosA0oEJZynjqxDFONzKJ5ewKeA1PmmBGcWG6QjHweiTmaiT5qX0TPmZmo5TQoKNE0m+WUD/W7evzy74BwUW/Ur5zsMPmUvpCLR/R77HZ7j2Mb/Wu3T+1TVM3/gLyqYDg'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="../../s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min9853.js?m=1573572739h&amp;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="../../s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.minf99f.js?m=1540208548h&amp;ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="../../s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min9c36.js?m=1585663916h&amp;ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="../../s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-url.min67f7.js?m=1585663916h&amp;ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="../../s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min52a8.js?m=1550600082h&amp;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="../../s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min5eac.js?m=1540208548h&amp;ver=2.0.2"></scr' + 'ipt>' );
+( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="../../s2.wp.com/wp-content/plugins/gutenberg-core/8.1.0/vendor/wp-polyfill-url.min.7490158baa64.js?m=1589446759h&amp;ver=3.6.4"></scr' + 'ipt>' );
+( window.DOMRect ) || document.write( '<script src="../../s1.wp.com/wp-content/plugins/gutenberg-core/8.1.0/vendor/wp-polyfill-dom-rect.7e21c10395bc.js?m=1589446759h&amp;ver=3.42.0"></scr' + 'ipt>' );
+</script>
+<script src='../../s2.wp.com/wp-includes/js/dist/vendor/lodash.min0e28.js?m=1573572739h&amp;ver=4.17.15'></script>
+<script>
+window.lodash = _.noConflict();
+</script>
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"176621741","siteName":"RSA kriptosistem","siteURL":"http:\/\/rsacryptosystem.wordpress.com","icon":"<img alt='' src='https:\/\/rsacryptosystem.files.wordpress.com\/2020\/05\/cropped-encrypt-3-599204-4.png?w=50' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/stow","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fblog-2%2F&signup_flow=account","themeURL":"https:\/\/wordpress.com\/theme\/stow\/","xhrURL":"https:\/\/rsacryptosystem.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"6f800f4f98","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"26fc85efb7\" \/>","referer":"https:\/\/rsacryptosystem.wordpress.com\/blog-2\/","canFollow":"1","feedID":null,"statusMessage":"","customizeLink":"https:\/\/rsacryptosystem.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fblog-2%2F","postID":"6","shortlink":"https:\/\/wp.me\/PbX5nL-6","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/rsacryptosystem.wordpress.com\/6","statsLink":"https:\/\/wordpress.com\/stats\/post\/6\/rsacryptosystem.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Stow","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fblog-2%2F&signup_flow=account\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/rsacryptosystem.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"3b20b4a925","display_exif":"1","display_comments":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/rsacryptosystem.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frsacryptosystem.wordpress.com%2Fblog-2%2F","blog_id":"176621741","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=176621741&v=wpcom&tz=2&user_id=0&subd=rsacryptosystem","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVkd1uwyAMhV9oxEXrNnox7VkIeJETfjIMpX37saWptqqK1CvMZ59jy4Y6CxNDxpBhdmWgwDCU9u0xDS2TEFQnux30hZwFkioABYunbuQneExsoxcJtT1vO3wW5wRTRoGWMoVBLBmQO6nenl8PewhYedZmEr2LZmKwxBmMTrEwugWKI2G9beGLWLuY6H1DwtGEDCODox640oyPiP6BDWElO2BmwNKycSIUTlfI6GenM97wDR9tPQXR6wRec8bUIhGPmBLZ5nJlDzrk1Ha5Nb42mWL4EV2jtZqCccUu2+CZwj0+fhVM58vT/a26t+PLGWHE/HvjFTTNh3+XL+qg1F5JOX4DtGIC0Q=='></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='../wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20190321#ver=20190321' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="../../stats.wp.com/w7f39.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'176621741','blog_tz':'2','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'176621741','v':'wpcom','tz':'2','user_id':'0','post':'6','subd':'rsacryptosystem'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJodEk4NDNTNVZYN0t0JUdFWHpbbGgxcT9mTjNaLyV+dWF4NXZjZHpXOVZ4YzZyW0ZGVUVEenNiOCxda2kvXVdiQzdqWWd+Zm50ZnpXSS03eEd+WH5HekQzQUE2aS5sR2QwMFomUVQ5MHJJYkVdRVg5WWpBRXZJLGtWUyY0UDk3aS4rNVt0alFtWj1RfHJRTlBEZnk3K2V5P2J0anlGNl8sOWRiMklBMz1jbHJZblV5bjY3LEI9Z1VoeXIrODJlcUNWVl1NQTk='}]);
+_stq.push([ 'clickTrackerInit', '176621741', '6' ]);
+	</script>
+<noscript><img src="../../pixel.wp.com/b0b80.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+
+<!-- Mirrored from rsacryptosystem.wordpress.com/blog-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 May 2020 09:19:51 GMT -->
+</html>
